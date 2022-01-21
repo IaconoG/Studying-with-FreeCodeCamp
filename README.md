@@ -1,12 +1,10 @@
 # Estudiando con freeCodeCamp
 
-
 ## Sobre este repositorio 
 
-En este repositorio ire subiendo todo lo trabajado en los certificados de freeCodeCamp.
-  - Proyectos y ejercicios.
-  - Practicas a través de youtube.
-
+En este repositorio ire subiendo todo lo trabajado con de freeCodeCamp.
+  - Proyectos y ejercicios de los certificados.
+  - Practicas a través del canal de youtube.
 
 ## Certificados a realizar
 
@@ -22,19 +20,15 @@ En este repositorio ire subiendo todo lo trabajado en los certificados de freeCo
 ### JavaScript Algorithms and Data Structures
   - 
   - 
-  - 
 
 ### Front End Development Libraries
-  - 
   - 
   - 
 
 ### Responsive Web Design
   - 
   - 
-  - 
 
 ### Back End Development and APIs
   - 
   - 
-  -
