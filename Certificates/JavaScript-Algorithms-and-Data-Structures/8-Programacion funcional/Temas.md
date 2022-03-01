@@ -7,19 +7,46 @@
 
 
 
-## Objeto
+## Programacion Funcional
 
-  - Crear
+  - Concepto
 
-    objeto = {
-      propiedad1 = valor
-      propiedad2 = valor
-      ... = ...
-    }
+  - Terminologia
 
-  - Notacion de punto
-    Acceder al valor de una propiedad del objeto
+## Metodos
 
-    console.log(obj.propiedad1) 
+  - map
+
+  - filter
+
+  - slice
+
+  - splice
+
+  - concat
+
+  - push 
+
+  - reduce 
+
+  - sort
+
+  - split
+
+  - join
+
+  - every
+
+  - some
+
+  - Ejercicios
+
+## Currificacion y Funciones Parciales
+
+  - Concepto y ejercitacion
+
+
+
+
 
   
