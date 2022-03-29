@@ -12,10 +12,14 @@
 
 function rot13(str) {
   const cifradoROT13 = 13; // Constante de desplazamietno de letra
+  const expReg_EsLetraONumero = /(?=\w)(?=[^_])/ // Expresion regular que nos devuleve si y solo si es alfanumerico pero no un guion bajo
+  	// (?=\w) = grupo de captura que conicide si y solo si es un alfanumerico
+  	// (?=[^_]) = grupo de captuara que concide si y solo si no es un guio bajo
+  
   return str
     .split("") // Obtenemos una array de caracteres
     .map((char) => { // Comprobamos y modificamos cada uno de los caracteres
-      if (/(?=\w)(?=[^_])/.test(char)) { // Si el caracter es un alfanumerico y no es ' _ ' se modifica
+      if (expReg_EsLetraONumero.test(char)) { // Si el caracter es un alfanumerico y no es ' _ ' se modifica
         char = char.charCodeAt(0); // Convertimos el caracter a su representacion en codigo ASCII
         return char < 78 
           ? String.fromCharCode(char + cifradoROT13) // Si el caracter es menor a N sumar el desplazamiento
@@ -25,7 +29,6 @@ function rot13(str) {
     })
     .join(""); // Unimos todos los caracteres del array
 }
-
 rot13("SERR PBQR PNZC"); // debe decodificarse en la cadena FREE CODE CAMP
 
 rot13("SERR YBIR?"); // debe decodificarse en la cadena FREE LOVE?
