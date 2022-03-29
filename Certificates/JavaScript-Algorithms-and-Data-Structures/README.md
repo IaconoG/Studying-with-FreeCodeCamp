@@ -1,3 +1,3 @@
+#Link del certificado completado
 
-URL
-https://www.freecodecamp.org/espanol/learn/javascript-algorithms-and-data-structures/
+ - https://www.freecodecamp.org/espanol/certification/GianIacono/javascript-algorithms-and-data-structures
