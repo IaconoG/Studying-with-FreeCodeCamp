@@ -1,0 +1,34 @@
+<!-- Sobreescribe estilos en código CSS posterior -->
+
+
+<!-- 
+  Acabamos de demostrar que nuestras clases sobrescribirán el CSS del elemento body. Entonces, la siguiente pregunta lógica es: ¿qué podemos hacer para sobrescribir nuestra clase pink-text?
+
+
+  Nota: No importa el orden en que las clases estén enlistadas dentro del elemento HTML.
+        Sin embargo, lo importante es el orden de las declaraciones de class clases en la sección <style>
+          - La segunda declaración siempre tendrá prioridad sobre la primera.
+
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Crea una clase CSS adicional llamada blue-text que asigne a un elemento el color azul ("blue"). Asegúrate de que esté debajo de tu declaración de pink-text.
+-->
+
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue ;
+  }
+</style>
+<h1 class="pink-text blue-text">Hello World!</h1>
