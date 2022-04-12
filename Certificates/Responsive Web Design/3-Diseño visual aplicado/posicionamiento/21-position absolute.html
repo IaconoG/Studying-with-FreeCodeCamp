@@ -1,0 +1,37 @@
+<!-- Bloquea un elemento con relación a su padre con el posicionamiento absoluto -->
+
+
+<!-- 
+  absolute
+  La siguiente opción para la propiedad CSS position es absolute, que bloquea el elemento en su lugar en relación con su contenedor principal.
+
+   A diferencia de la posición relative, esto elimina el elemento del flujo normal del documento, por lo que los elementos circundantes lo ignoran
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Bloquea el elemento #searchbar en al parte superior derecha de su section padre declarando su positioncomo absolute. Dale desplazamientos top y right de 50 píxeles cada uno.
+-->
+
+<style>
+  #searchbar {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+  section {
+    position: relative;
+  }
+</style>
+<body>
+  <h1>Welcome!</h1>
+  <section>
+    <form id="searchbar">
+      <label for="search">Search:</label>
+      <input type="search" id="search" name="search">
+      <input type="submit" name="submit" value="Go!">
+    </form>
+  </section>
+</body>
