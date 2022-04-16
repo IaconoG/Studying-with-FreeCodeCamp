@@ -1,0 +1,69 @@
+<!-- Crear movimiento usando animación CSS -->
+
+
+<!-- 
+  Cuando los elementos tienen una position, como fixed o relative, las propiedades de desplazamiento CSS right, left, top y bottom se pueden usar en las reglas de animación para crear movimiento.
+
+    @keyframes rainbow {
+      0% {
+        background-color: blue;
+        top: 0px;
+      }
+      50% {
+        background-color: green;
+        top: 50px;
+      }
+      100% {
+        background-color: yellow;
+        top: 0px;
+      }
+    }
+  
+  En el siguiente ejemplo, puedes empujar el elemento hacia abajo y luego hacia arriba estableciendo la propiedad top en 50% en 50px, estableciéndolo en 0px para el 0% y 100%
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Agrega un movimiento horizontal a la animación div. 
+  Usando la propiedad desplazamiento left, agrega a la regla @keyframes para que el arcoíris (rainbow) comience en 0 píxeles en 0%, se mueva a 25 píxeles en 50%, y termine en -25 píxeles en 100%. 
+  No reemplaces la propiedad top en el editor; la animación debe tener movimiento vertical y horizontal.
+-->
+
+
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  #rect {
+    animation-name: rainbow;
+    animation-duration: 4s;
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-color: blue;
+      top: 0px;
+      left: 0px;
+    }
+    50% {
+      background-color: green;
+      top: 50px;
+      left: 25px;
+    }
+    100% {
+      background-color: yellow;
+      top: 0px;
+      left: -25;
+    }
+  }
+</style>
+
+<div id="rect"></div>
