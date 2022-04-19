@@ -2,7 +2,7 @@
 
 ## Sobre este repositorio 
 
-En este repositorio ire subiendo todo lo trabajado con de freeCodeCamp.
+En este repositorio ire subiendo todo lo trabajado con freeCodeCamp.
   - Proyectos y ejercicios de los certificados.
   - Practicas a través del canal de youtube.
 
