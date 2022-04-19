@@ -8,27 +8,18 @@ En este repositorio ire subiendo todo lo trabajado con de freeCodeCamp.
 
 ## Certificados a realizar
 
-- [] [JavaScript Algorithms and Data Structures](#JavaScript-Algorithms-and-Data-Structures)
-- [] [Front End Development Libraries](#Front-End-Development-Libraries)
-- [] [Responsive Web Design](#Responsive-Web-Design)
-- [] [Back End Development and APIs](#Back-End-Development-and-APIs)
+- [x] [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/GianIacono/javascript-algorithms-and-data-structures)
+- [ ] Responsive Web Design
+- [ ] Front End Development Libraries
+- [ ] Back End Development and APIs
 
 
-
-## Projectos echos durante los certificados
+## Projectos echos en los certificados
 
 ### JavaScript Algorithms and Data Structures
-  - 
-  - 
+  - Comprobador de palíndromos
+  - Conversor de números romanos
+  - Cifrado César
+  - Validador de números telefónicos
+  - Caja registradora
 
-### Front End Development Libraries
-  - 
-  - 
-
-### Responsive Web Design
-  - 
-  - 
-
-### Back End Development and APIs
-  - 
-  - 
