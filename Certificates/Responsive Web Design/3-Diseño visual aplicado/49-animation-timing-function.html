@@ -1,0 +1,63 @@
+<!-- Cambia la duración de las animaciones con palabras clave-->
+
+
+<!-- 
+  La propiedad CSS animation-timing-function especifica cómo una animación CSS debe avanzar sobre la duración de cada ciclo.
+  
+  Keyword values: animation-timing-function: x
+    - ease;         // empieza despacio, acelera en el medio y luego reduce la velocidad de nuevo al final.
+    - ease-in;      // lenta al inicio y luego acelera al final
+    - ease-out;     // rápido al inicio y luego reduce la velocidad,
+    - ease-in-out;  // despacio al inicio, mantiene una velocidad tranquila al medio y temrmina despacio
+    - linear;       // velocidad constante a lo largo de la animación.
+    - step-start;   // se clava la inicio
+    - step-end;     // se clava al final
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Para los elementos con id ball1 y ball2, agrega una propiedad animation-timing-function a cada uno y asigna linear a #ball1 y ease-out a #ball2. 
+  Nota la diferencia entre cómo los elementos se mueven durante la animación pero terminan juntos, dado que comparten la misma animation-duration de 2 segundos.
+-->
+
+<style>
+
+  .balls {
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #ball1 {
+    left:27%;
+    animation-timing-function: step-end;
+  }
+  #ball2 {
+    left:56%;
+
+  }
+
+  @keyframes bounce {
+    0% {
+      top: 0px;
+    }
+    100% {
+      top: 249px;
+    }
+  }
+
+</style>
+
+<div class="balls" id="ball1"></div>
+<div class="balls" id="ball2"></div>
