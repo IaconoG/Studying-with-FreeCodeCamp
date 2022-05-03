@@ -1,0 +1,79 @@
+<!-- Usa la propiedad flex-wrap para envolver una fila o columna -->
+
+
+<!-- 
+  CSS flexbox tiene una característica para dividir un flex container en varias filas (o columnas). 
+    - De forma predeterminada, un contenedor flexible encajará todos los elementos flexibles juntos. 
+
+  flex-wrap
+  La propiedad flex-wrap le indica al CSS que envuelva los elementos.
+    - Esto significa que los elementos extra se mueven hacia una nueva fila o columna
+    - El punto de ruptura donde ocurre la envoltura depende del tamaño de los elementos y del tamaño del contenedor.
+
+  Opciones para la dirección de la envoltura:
+    - nowrap: No envuelve elementos. Conf. predeterminada.
+
+    - wrap: Envuelve elemetnos en multiples lineas 
+      - filas, de arriba a abajo.
+      - columnas, izquierda a derecha
+    
+    - wrap-reverse: Envulve elementos en multiples lineas de manera inverza
+      - filas, de abajo hacia arriba
+      - columnas, derecha a izquierda
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  La disposición actual tiene demasiadas cajas para una sola fila. Agrega la propiedad CSS flex-wrap al elemento #box-container y asígnale un valor de wrap.
+-->
+
+<style>
+  #box-container {
+    background: gray;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    width: 25%;
+    height: 50%;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 25%;
+    height: 50%;
+  }
+  #box-3 {
+    background-color: violet;
+    width: 25%;
+    height: 50%;
+  }
+  #box-4 {
+    background-color: yellow;
+    width: 25%;
+    height: 50%;
+  }
+  #box-5 {
+    background-color: green;
+    width: 25%;
+    height: 50%;
+  }
+  #box-6 {
+    background-color: black;
+    width: 25%;
+    height: 50%;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+  <div id="box-3"></div>
+  <div id="box-4"></div>
+  <div id="box-5"></div>
+  <div id="box-6"></div>
+</div>

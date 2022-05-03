@@ -1,0 +1,45 @@
+<!-- Utiliza la propiedad flex-shrink para reducir elementos -->
+
+
+<!-- 
+  flex-shrink
+  Cuando se usa, permite que un elemento se contraiga si el contenedor flex es demasiado pequeño.
+    - Los elementos se reducen cuando el ancho del contenedor principal es menor que el ancho combinado de todos los elementos flex dentro del él.
+  
+  La propiedad flex-shrink toma números como valores. 
+    - Cuando mayor sea el número, más se reducirá en comparación con los otros elementos en el contenedor.
+  
+  
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Agrega la propiedad CSS flex-shrink tanto a #box-1 como a #box-2. Da a #box-1 un valor de 1 y a #box-2 un valor de 2.
+-->
+
+<style>
+  #box-container {
+    display: flex;
+    height: 500px;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    width: 100%;
+    height: 200px;
+    flex-shrink: 1;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 100%;
+    height: 200px;
+    flex-shrink: 2;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>

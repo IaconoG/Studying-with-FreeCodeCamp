@@ -1,0 +1,47 @@
+<!-- Utiliza la propiedad flex-direction para hacer una fila -->
+
+
+<!-- 
+  Agregando display: flex a un elemento lo convierte en un contenedor flexible. 
+  Esto permite alinear cualquier elemento secundario de ese elemento en filas o columnas
+
+  flex-directin
+  Para ello, agrega la propiedad flex-direction al elemento principal y configúralo en fila o columna.
+    - row
+    - colum
+    - row-reverse
+    - column-reverse
+  
+  Nota: El valor predeterminado para la propiedad flex-direction es row.
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Agrega la propiedad CSS flex-direction al elemento #box-container y asígnale un valor de row-reverse.
+-->
+
+<style>
+  #box-container {
+    display: flex;
+    height: 500px;
+    flex-direction: row-reverse;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    width: 50%;
+    height: 50%;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 50%;
+    height: 50%;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
