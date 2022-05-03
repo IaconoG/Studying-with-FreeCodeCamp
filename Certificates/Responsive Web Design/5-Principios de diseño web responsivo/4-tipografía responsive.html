@@ -1,0 +1,38 @@
+<!-- Haz tipografía responsiva -->
+
+
+<!-- 
+  En lugar de usar em o px para dimensionar texto, puedes usar unidades de viewport para obtener una tipografía responsiva.
+
+  Las unidades de viewport son relativas a las dimesionde del viewport (ancho o alto) de un dispositivo, y los porcentahes son relativos al tamanio del elemento contenerdor padre.
+
+  Las 4 diferentes unidades de viewport son:
+    - vw (viewport width): 10vw seria el 10% del ANCHO del viewport.
+    - vh (viewport heigth): 3vh seria el 3% del ALTO del viewport.
+    - vmin (viewport minimo): 70vmin seria el 70% de la dimension mas pequenia del vw.
+    - vmax (viewport maximo): 100vmax seria el  100% de la dimesion mas grande del vw.
+  
+  Ejemplo que establece una etiqueta body al 30% del ancho del viewport.
+
+    body { width: 30vw; }
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Establece el ancho width de la etiqueta h2 al 80% del ancho del viewport y el ancho width del párrafo como el 75% de la dimensión más pequeña del viewport.
+-->
+
+
+<style>
+  h2 {
+    width: 80vw;
+  }
+  p {
+    width: 75vmin;
+  }
+</style>
+
+<h2>Importantus Ipsum</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
