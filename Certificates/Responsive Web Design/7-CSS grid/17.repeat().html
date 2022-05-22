@@ -1,0 +1,58 @@
+<!-- Reduce repeticiones usando la función repeat -->
+
+
+<!-- 
+  Cuando usaste grid-template-columns y grid-template-rows para definir la estructura de una cuadrícula (grid), ingresaste un valor para cada fila o columna que creaste.
+
+  A continuación un ejemplo que crea una cuadrícula de 100 filas, cada fila con 50px de alto.
+
+    - grid-template-rows: repeat(100, 50px);
+
+  También puedes repetir múltiples valores con la función repeat e insertar la función entre otros valores al definir una estructura de cuadrícula. Así se ve:
+
+    - grid-template-columns: repeat(2, 1fr 50px) 20px;
+
+  Esto traduce a:
+
+    - grid-template-columns: 1fr 50px 1fr 50px 20px;
+
+  Nota: el 1fr 50px es repetido dos veces, seguido de 20px.
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Usa repeat para eliminar repetición de la propiedad grid-template-columns.
+-->
+
+<style>
+  .item1{background:LightSkyBlue;}
+  .item2{background:LightSalmon;}
+  .item3{background:PaleTurquoise;}
+  .item4{background:LightPink;}
+  .item5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    /* Cambia solo el código debajo de esta línea */
+
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Cambia solo el código encima de esta línea */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+</style>
+
+<div class="container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+</div>
