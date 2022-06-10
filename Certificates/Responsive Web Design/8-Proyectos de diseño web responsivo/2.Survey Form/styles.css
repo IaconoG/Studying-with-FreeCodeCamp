@@ -1,0 +1,15 @@
+/* segun WCAG guideline los botones deben ser 44px x 44px si el texto no es lo suficiente para abarcar 44 x 44*/
+.regla-de-botones {
+  height: 44px;
+  width: 44px;
+}
+
+/* modificar el funcionamiento de aria-expanded="false|true" segun este en false o true*/
+/* hacer esto con css si es posible, si no quitarlo*/
+
+/* Esto nos pemite quitar el borde de los botones debido a que normalmente no los usamos (si no q utilizamos sombras) */
+/* Uitlizar esta configuracion nos permite "eliminar el borde", pero otorga accecibilidad par los usuarios que utilizen High Contrast Mode*/
+.estilo-botones {
+  border: 1px solid transparent;
+}
+/*  */
