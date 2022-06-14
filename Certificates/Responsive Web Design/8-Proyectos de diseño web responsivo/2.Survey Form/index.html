@@ -4,41 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Survey Form</title>
 </head>
 <body>
   <header>
-    <h1 class="title"></h1>
-    <h2 class="subtitle"></h2>
+    <h1 id="title" class="title">freeCodeCamp Survey Form</h1>
+    <p id="description" class="subtitle">Thank you for taking the time to help us improve the platform</p>
   </header>
   <main>
-    <form action="" method="get" name="survey_form" id="survey-form" class="">
-      <section class="" aria-label="name-section">
-        <label for="name" id="" class="">
+    <form action="" method="get" name="survey-form" id="survey-form" class="">
+      <section class="container" aria-label="name-section">
+        <label for="user_name" id="name-label" class="name-label">
           Name
         </label>
-        <input type="text" id="name" class="" name="user_name" placeholder="Enter your name" autocomplete="name" required>
+        <input type="text" id="name" class="input-name input-heigth" name="user_name" placeholder="Enter your name" autocomplete="name" required>
       </section>
 
-      <section class="" aria-label="email-section">
-        <label for="email">
+      <section class="container" aria-label="email-section">
+        <label for="user_email" id="email-label" class="email-label"> 
           Email
         </label>
-        <input type="email" id="email" class="" name="user_mail" placeholder="Enter your Email" autocomplete="email" required>
+        <input type="email" id="email" class="input-email input-heigth" name="user_email" placeholder="Enter your Email" autocomplete="email" required>
       </section>
 
-      <section class="" aria-label="age-section">
-        <label for="age">
+      <section class="container" aria-label="age-section">
+        <label for="user_age" id="number-label" class="age-label">
           Age <span class="optional">(optional)</span>
         </label>
-        <input type="number" id="age" class="" name="user_age" min="10" max="99" autocomplete="on" placeholder="Age">
+        <input type="number" id="number" class="input-age input-heigth" name="user_age" min="10" max="99" placeholder="Age" autocomplete="on">
       </section>
 
-      <section class="" aria-label="role-section">
+      <section class="container" aria-label="role-section">
         <p>
           Whitch option best describes your current role? 
         </p>
-        <select name="" id="roles" class="" aria-placeholder="Select current role" aria-expanded="false" required>
+        <select name="role" id="dropdown" class="slect-container input-heigth" aria-placeholder="Select current role" aria-expanded="false" required>
           <option disabled selected value="default">Select current role</option>
           <option value="student">Student</option>
           <option value="fullJob">Full Time Job</option>
@@ -48,28 +49,27 @@
         </select>
       </section>
       
-      <section class="" aria-label="recommend-section">
+      <section class="container" aria-label="recommend-section">
         <p>Would you recommend freeCodeCamp to a friend?</p>
-        <label for="recommend_1">
-          <input type="radio" name="user-recommend" id="recommend_1" class="" value="definitely" checked>
-          Definitely
-        </label>
-
-        <label for="recommend_2">
-          <input type="radio" name="user-recommend" id="recommend_2" class="" value="maybe">
-          Maybe
-        </label>
-
-        <label for="recommend_3">
-          <input type="radio" name="user-recommend" id="recommend_3" class="" value="not-sure">
-          Not sure
-        </label>
-
+        <div class="options-container less-options">
+          <label for="recommend_1">
+            <input type="radio" name="user-recommend" id="recommend_1" class="" value="definitely" checked>
+            Definitely
+          </label>
+          <label for="recommend_2">
+            <input type="radio" name="user-recommend" id="recommend_2" class="" value="maybe">
+            Maybe
+          </label>
+          <label for="recommend_3">
+            <input type="radio" name="user-recommend" id="recommend_3" class="" value="not-sure">
+            Not sure
+          </label>
+        </div>
       </section>
 
-      <section class="" aria-label="favourite-feature-section">
+      <section class="container" aria-label="favourite-feature-section">
         <p>What is your favorite feature of freeCodeCamp?</p>
-        <select name="" id="favourite-features" class="" aria-placeholder="" aria-expanded="false" required>
+        <select name="mostLike" id="favourite-features" class="input-heigth slect-container" aria-expanded="false" required>
           <option disabled selected value="default">Select an option</option>
           <option value="challenges">Challenges</option>
           <option value="projects">Projects</option>
@@ -78,60 +78,62 @@
         </select>
       </section>
 
-      <section class="" aria-label="things-to-improve-section">
+      <section class="container" aria-label="things-to-improve-section">
         <p>What would you like to see improved? (Check all that apply)</p>
-        <label for="front-end-projects">
-          <input type="checkbox" name="user-prefer" id="front-end-projects" class="" value="front-end-projects">
-          Front-end Projects
-        </label>
-        <label for="back-end-projects">
-          <input type="checkbox" name="user-prefer" id="back-end-projects" class="" value="back-end-projects">
-          Back-end Projects
-        </label>
-        <label for="data-visualization">
-          <input type="checkbox" name="user-prefer" id="data-visualization" class="" value="data-visualization">
-          Data Visualization
-        </label>
-        <label for="challenges">
-          <input type="checkbox" name="user-prefer" id="challenges" class="" value="challenges">
-          Challenges
-        </label>
-        <label for="open-source-community">
-          <input type="checkbox" name="user-prefer" id="open-source-community" class="" value="open-source-community">
-          Open Source Community
-        </label>
-        <label for="gitter-help-rooms">
-          <input type="checkbox" name="user-prefer" id="gitter-help-rooms" class="" value="gitter-help-rooms">
-          Gitter help rooms
-        </label>
-        <label for="videos">
-          <input type="checkbox" name="user-prefer" id="videos" class="" value="videos">
-          Video
-        </label>
-        <label for="city-meetups">
-          <input type="checkbox" name="user-prefer" id="city-meetups" class="" value="city-meetups">
-          City Meetups
-        </label>
-        <label for="wiki">
-          <input type="checkbox" name="user-prefer" id="wiki" class="" value="wiki">
-          Wiki
-        </label>
-        <label for="forum">
-          <input type="checkbox" name="user-prefer" id="forum" class="" value="forum">
-          Forum
-        </label>
-        <label for="additional-courses">
-          <input type="checkbox" name="user-prefer" id="additional-courses" class="" value="additional-courses">
-          Additional
-        </label>
+        <div class="options-container more-options">
+          <label for="front-end-projects" class="">
+            <input type="checkbox" name="user-prefer" id="front-end-projects" class="" value="front-end-projects">
+            Front-end Projects
+          </label>
+          <label for="back-end-projects">
+            <input type="checkbox" name="user-prefer" id="back-end-projects" class="" value="back-end-projects">
+            Back-end Projects
+          </label>
+          <label for="data-visualization">
+            <input type="checkbox" name="user-prefer" id="data-visualization" class="" value="data-visualization">
+            Data Visualization
+          </label>
+          <label for="challenges">
+            <input type="checkbox" name="user-prefer" id="challenges" class="" value="challenges">
+            Challenges
+          </label>
+          <label for="open-source-community">
+            <input type="checkbox" name="user-prefer" id="open-source-community" class="" value="open-source-community">
+            Open Source Community
+          </label>
+          <label for="gitter-help-rooms">
+            <input type="checkbox" name="user-prefer" id="gitter-help-rooms" class="" value="gitter-help-rooms">
+            Gitter help rooms
+          </label>
+          <label for="videos">
+            <input type="checkbox" name="user-prefer" id="videos" class="" value="videos">
+            Video
+          </label>
+          <label for="city-meetups">
+            <input type="checkbox" name="user-prefer" id="city-meetups" class="" value="city-meetups">
+            City Meetups
+          </label>
+          <label for="wiki">
+            <input type="checkbox" name="user-prefer" id="wiki" class="" value="wiki">
+            Wiki
+          </label>
+          <label for="forum">
+            <input type="checkbox" name="user-prefer" id="forum" class="" value="forum">
+            Forum
+          </label>
+          <label for="additional-courses">
+            <input type="checkbox" name="user-prefer" id="additional-courses" class="" value="additional-courses">
+            Additional
+          </label>
+        </div>
       </section>
 
-      <section class="" aria-label="suggestion-section">
+      <section class="container" aria-label="suggestion-section">
         <p>Any comments or suggestions?</p>
-        <textarea name="comment" id="comments" cols="" rows="10" maxlength="" spellcheck="true" placeholder="Enter your comment here..."></textarea>
+        <textarea name="comment" id="comments" maxlength="" spellcheck="true" placeholder="Enter your comment here..."></textarea>
       </section>
 
-      <section class="" aria-label="submit-section">
+      <section class="container" aria-label="submit-section">
         <button type="submit" id="submit" class="submit-button" aria-labelledby="text"><p id="text">Submit Data</p></button>
       </section>
 
