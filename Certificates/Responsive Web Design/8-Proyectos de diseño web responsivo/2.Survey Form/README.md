@@ -1,3 +1,9 @@
+POR HACER
+
+  [] Realizar las distintas scakas de la pagina (responsive)
+  [] Verificar, mejorar, e implementar accesibilidad para screen readers
+  
+
 # Build a Survey Form
 Objective: Build an app that is functionally similar to https://survey-form.freecodecamp.rocks
 
@@ -40,6 +46,12 @@ Atributos y elementos
 Accesibilidad 
   - Buttons
     - https://youtu.be/dqBfHnp_W7E
+  
+  - Aria Label
+    - https://www.aditus.io/aria/aria-label/
+
+  - Modo lectura
+    - https://blogthinkbig.com/activa-el-modo-lectura#:~:text=El%20modo%20lectura%20en%20Google%20Chrome&text=Actualmente%2C%20para%20activar%20este%20modo,que%20indique%20el%20campo%20Destino.
     
 
 Informacion
@@ -72,3 +84,6 @@ https://freefrontend.com/css-select-boxes/
   - https://codepen.io/miniven/pen/ZJydge
 
   - https://codepen.io/avstorm/pen/bPOgRO
+
+
+

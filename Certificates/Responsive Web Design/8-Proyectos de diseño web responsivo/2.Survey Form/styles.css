@@ -67,6 +67,7 @@
 }
 html {
   font-family: var(--ff-primary);
+  font-size: 16px;
   font-weight: 400;
   line-height: 1;
   color: var(--clr-black-light);
@@ -105,6 +106,7 @@ h1 {
   font-weight: bold;
   text-align: center;
 }
+.title { margin-bottom: 0.5rem;}
 .subtitle {
   text-align: center;
   font-style: italic;
@@ -129,6 +131,13 @@ form {
   flex-direction: column;
   justify-content: space-around;
 }
+section  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 section > input{
   margin-top: 0.3rem;
 }
@@ -141,6 +150,13 @@ section > *{
 .container {
   margin-inline: auto;
   width: min(90%, 70.5rem);
+  height: 3rem;
+}
+.container--height {
+  height: 11rem;
+}
+.container-text_area--height {
+  height: auto;
 }
 
 input[type="text"], input[type="email"], input[type="number"] {
@@ -156,7 +172,7 @@ input[type="text"], input[type="email"], input[type="number"] {
   border-radius: var(--default-radious-border);
 }
 .input-heigth {
-  height: 1.5rem;
+  height: 100%;
 }
 
 .slect-container {
@@ -207,6 +223,7 @@ input[type="checkbox"], input[type="radio"] {
   width: 1.15em;
   height: 1.15em;
   border: 0.15em solid var(--clr-grey);
+  cursor: pointer;
 }
 input[type="checkbox"] {
   border-radius: 0.2em;
@@ -233,7 +250,6 @@ input[type="checkbox"]:checked::before, input[type="radio"]:checked::before {
   transform: scale(1);
 }
 
-
 textarea {
   resize: none;
   outline: none;
@@ -241,22 +257,43 @@ textarea {
   width: 100%;
   /* border: 1px solid var(--clr-grey); */
   border-radius: var(--default-radious-border);
-
   border: 1px solid #E8EAED;
   box-shadow: var(--default-shadow);
-
   padding-inline: 0.5em;
   padding-block: 0.2em;
 }
 
-
-
 button {
-  border: 1px solid #E8EAED;
-  box-shadow: var(--default-shadow);
+  background: var(--clr-bg-1);
+  background: linear-gradient(45deg, var(--clr-bg-1) 0%, var(--clr-bg-2) 100%);
+  width: 80%;
+  height: 2rem;
+  border: 1px solid transparent;
+  box-shadow: var(--dark-shadow);
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.submit-button {
+  transform: scale(1);
+  transition: transform 0.2s ease-in 0.2s;
+}
+
+.submit-button:hover {
+  transform: scale(1.05);
 }
 
 
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 15px;
+  } 
+}
+@media screen and (max-height: 720px) {
+  html {
+    font-size: 15px;
+  } 
+}
 /** Desk **/
 @media screen and (min-width: 20em) { /* Yem * 16 = Xpx */
   form{

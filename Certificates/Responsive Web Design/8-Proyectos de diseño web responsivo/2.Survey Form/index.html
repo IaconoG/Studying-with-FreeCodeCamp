@@ -14,28 +14,28 @@
   </header>
   <main>
     <form action="" method="get" name="survey-form" id="survey-form" class="">
-      <section class="container" aria-label="name-section">
+      <section class="container" aria-label="name section">
         <label for="user_name" id="name-label" class="name-label">
           Name
         </label>
-        <input type="text" id="name" class="input-name input-heigth" name="user_name" placeholder="Enter your name" autocomplete="name" required>
+        <input id="name" class="input-name input-heigth" type="text" name="user_name" placeholder="Enter your name" autocomplete="name" required>
       </section>
 
-      <section class="container" aria-label="email-section">
+      <section class="container" aria-label="email section">
         <label for="user_email" id="email-label" class="email-label"> 
           Email
         </label>
         <input type="email" id="email" class="input-email input-heigth" name="user_email" placeholder="Enter your Email" autocomplete="email" required>
       </section>
 
-      <section class="container" aria-label="age-section">
+      <section class="container" aria-label="age section">
         <label for="user_age" id="number-label" class="age-label">
           Age <span class="optional">(optional)</span>
         </label>
         <input type="number" id="number" class="input-age input-heigth" name="user_age" min="10" max="99" placeholder="Age" autocomplete="on">
       </section>
 
-      <section class="container" aria-label="role-section">
+      <section class="container" aria-label="role section">
         <p>
           Whitch option best describes your current role? 
         </p>
@@ -49,9 +49,9 @@
         </select>
       </section>
       
-      <section class="container" aria-label="recommend-section">
+      <section class="container" aria-label="recommend section">
         <p>Would you recommend freeCodeCamp to a friend?</p>
-        <div class="options-container less-options">
+        <div class="options-container less-options" aria-label="how much do you recommend">
           <label for="recommend_1">
             <input type="radio" name="user-recommend" id="recommend_1" class="" value="definitely" checked>
             Definitely
@@ -67,7 +67,7 @@
         </div>
       </section>
 
-      <section class="container" aria-label="favourite-feature-section">
+      <section class="container" aria-label="favourite feature section">
         <p>What is your favorite feature of freeCodeCamp?</p>
         <select name="mostLike" id="favourite-features" class="input-heigth slect-container" aria-expanded="false" required>
           <option disabled selected value="default">Select an option</option>
@@ -78,7 +78,7 @@
         </select>
       </section>
 
-      <section class="container" aria-label="things-to-improve-section">
+      <section class="container container--height" aria-label="things to improve section">
         <p>What would you like to see improved? (Check all that apply)</p>
         <div class="options-container more-options">
           <label for="front-end-projects" class="">
@@ -128,13 +128,13 @@
         </div>
       </section>
 
-      <section class="container" aria-label="suggestion-section">
+      <section class="container container-text_area--height" aria-label="suggestion section">
         <p>Any comments or suggestions?</p>
-        <textarea name="comment" id="comments" maxlength="" spellcheck="true" placeholder="Enter your comment here..."></textarea>
+        <textarea name="comment" id="comments" maxlength="" spellcheck="true" aria-labelledby="text area for a suggestion" placeholder="Enter your comment here..."></textarea>
       </section>
 
-      <section class="container" aria-label="submit-section">
-        <button type="submit" id="submit" class="submit-button" aria-labelledby="text"><p id="text">Submit Data</p></button>
+      <section class="container" aria-label="submit section">
+        <button type="submit" id="submit" class="submit-button" aria-labelledby="submit button"><p id="text">Submit Data</p></button>
       </section>
 
     </form>
