@@ -1,6 +1,4 @@
 POR HACER
-
-  [] Realizar las distintas scakas de la pagina (responsive)
   [] Verificar, mejorar, e implementar accesibilidad para screen readers
   
 
@@ -38,10 +36,6 @@ Atributos y elementos
     - https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/
   - Froms
     - https://developer.mozilla.org/es/docs/Learn/Forms/How_to_structure_a_web_form
-    - https://www.w3schools.com/tags/tag_select.asp
-    - https://www.w3schools.com/tags/tag_option.asp
-    - https://www.w3schools.com/tags/tag_form.asp
-    - https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete
 
 Accesibilidad 
   - Buttons
@@ -58,32 +52,6 @@ Informacion
   - https://developer.mozilla.org/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
   - https://alebarbaja.medium.com/cuando-usar-main-section-article-header-footer-y-aside-en-el-html-2fbfc5898988
    
-
-
-https://www.youtube.com/watch?v=okbByPWS1Xc
-
-https://freefrontend.com/css-input-text/
-
-https://codepen.io/jh3y/pen/GRpMZZG
-
-//////////
-
-https://survey-form.freecodecamp.rocks/
-
-
-
-
-
-
-https://www.w3schools.com/cssref/sel_attribute_value.asp
-
-Dice;o de los se;ect
-
-https://freefrontend.com/css-select-boxes/
-
-  - https://codepen.io/miniven/pen/ZJydge
-
-  - https://codepen.io/avstorm/pen/bPOgRO
 
 
 
