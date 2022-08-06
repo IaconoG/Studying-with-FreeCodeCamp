@@ -28,6 +28,7 @@
   --default-radious-border: 0.3rem;
 }
 /** Estilos Globales **/
+/* Reset */
 *,
 ::after,
 ::before {
@@ -45,21 +46,22 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--clr-white-smoke-2);
+  background-color: var(--clr-white-smoke-1);
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 }
 header {
   width: 100%;
-  height: 10vh;
+  height: 12vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding: 0.5em 0;
 }
 nav {
-  width: 100%;
+  width: 90%;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -67,14 +69,17 @@ nav {
   gap: 0px 0px;
   font-size: 0.9rem;
 }
+main {
+  width: 100%;
+  height: 100%;
+}
 section {
   width: 100%;
-  height: 1500px;
+  height: 1500px; /* FIXME Revisar esto */
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 8rem repeat(3, 1fr);
+  grid-template-rows: 8em auto repeat(2, 1fr);
   gap: 0px 0px;
-  background-color: blue;
 }
 img {
   max-width: 100%;
@@ -107,6 +112,9 @@ h3,
 h4 {
 
 } */
+p {
+  font-size: 0.9375em;
+}
 
 a, li {
   list-style-type: none;
@@ -122,7 +130,7 @@ a, li {
   box-shadow: var(--dark-shadow);
   border-radius: var(--default-radious-border);
   cursor: pointer;
-  padding-inline: 0.5rem;
+  padding-inline: 0.5em;
   color: var(--clr-black-light);
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -130,7 +138,7 @@ a, li {
 /* header */
 .logo {
   grid-area: 1 / 1 / 2 / 2; 
-  padding-right: 1.5rem;
+  padding-right: 1.5em;
 }
 .links {
   grid-area: 2 / 1 / 3 / 2;
@@ -141,7 +149,6 @@ a, li {
 }
 /* section */
 .section-hero {
-  background-color: pink;
   grid-area: 1 / 1 / 2 / 2;
   justify-self: center;
   align-self: center;
@@ -151,7 +158,7 @@ a, li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem 0px;
+  gap: 1em 0px;
   
   text-align: center;
 }
@@ -165,18 +172,156 @@ a, li {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 1.5rem;
-    gap: 0 0.4rem; 
+    height: 1.5em;
+    gap: 0 0.4em; 
+  }
+
+.section-features{ 
+  background-color: var(--clr-white-smoke-6);
+  grid-area: 2 / 1 / 3 / 2;
+  width: 100%;
+  height: auto;
+  padding: 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em 0px;
+}
+  /* //TODO Completar los dise;os de las features  */
+  .section-features div { /* div para cada feature */
+    height: 5rem;
+    display: grid;
+    grid-template-columns: 15% 80%;
+    grid-template-rows: 30% 70%;
+    gap: 0 5%;
+    max-width: 100%;
+    margin-inline: 10%;
+    height: 5em;
+    background-color: pink;
+    align-items: center; 
+    border-radius: var(--default-radious-border);
+  }
+    .section-features div i { /* icon - img */
+      width: 100%;
+      height: auto;
+      grid-area: 1 / 1 / 3 /2;
+      justify-self: center;
+      align-self: center;
+      background-color: orange;
+    }
+
+    .section-features div h3 { /* title */
+      width: 100%;
+      height: auto;
+      grid-area: 1 / 2 / 2 / 3;
+      font-size: 1.2rem;
+      font-weight: 700;
+      background-color: paleturquoise;
+    }
+    .section-features div p { /* description */
+      width: 100%;
+      height: 100%;
+      grid-area: 2 / 2 / 3 / 3;
+      font-size: 0.9rem;
+      font-weight: 400;
+      background-color: wheat;
+    }
+
+  .feature-1 {
+    
+  }
+  .feature-2 {
+  }
+  .feature-3 {
   }
 
 
-.section-features{
-  background-color: red;
-}
+
+
 .section-video{
   background-color: purple;
+  grid-area: 3 / 1 / 4 / 2;
 }
 .section-pricing{
   background-color: green;
+  grid-area: 4 / 1 / 5 / 2;
 }
 
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) 
+@media screen and (min-width: 37.5em) {
+  h1 {
+    font-size: 1.9rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+/* Medium devices (Small screens, laptops, 768px and up) 
+@media screen and (min-width: 48em) { 
+  h1 {
+    font-size: 2.2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+
+}
+  
+/* Extra large devices (large laptops and desktops, 1025px and up) 
+@media screen and (min-width: 64.0625em) { 
+  h1 {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.05rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) 
+@media screen and (min-width: 75em) {  
+  h1 {
+    font-size: 2.7rem;
+  }
+  .subtitle {
+    font-size: 1.13rem;
+  }
+}
+
+/* Defualt desktop (1920px and up) 
+@media screen and (min-width: 120em) {
+  header {
+    padding-top: 1%;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .subtitle {
+    font-size: 1.3em
+  }
+  .name-label, .email-label, .age-label, p  {
+    font-size: 1.1em;
+  }
+  label, textarea {
+    font-size: 0.9em;
+  }
+  textarea {
+    padding-block: 0.5em;
+  }
+
+  
+}
+
+/* -- Vertical Adjus, 1200px and less) --
+@media screen and (max-height: 46.875em) { 
+  main {
+    height: 40em;
+    margin-bottom: 1rem;
+  }
+}
+*/
