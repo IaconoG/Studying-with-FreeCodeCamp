@@ -6,6 +6,8 @@
     <meta name="description" content="A project of freecodecamp to practice build a Product Landing Page">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Preventing Mobile Users from Scaling Content -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     <!-- Favicon -->
@@ -16,10 +18,9 @@
   </head>
   
   <body>
- 
     <header id="header">
       <nav class="nav-bar">
-        <img id="header-img" class="logo" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="original trombones logo">
+        <img id="header-img" class="logo" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="logo 'original trombones'">
         <ul class="links">
           <li><a href="#features">Features</a></li>
           <li><a href="#video">How It Works</a></li>
@@ -68,7 +69,9 @@
         </article>
 
         <article id="how-it-works" class="section-video">
-          <iframe id="video" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          <iframe id="video" title="embedded-video" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&controls=0&showinfo=0" frameborder="0" loading="lazy" allowfullscreen>
+            <p>Your browser doesn't support iframes</p>
+          </iframe>
         </article>
 
         <article id="pricing" class="section-pricing">
