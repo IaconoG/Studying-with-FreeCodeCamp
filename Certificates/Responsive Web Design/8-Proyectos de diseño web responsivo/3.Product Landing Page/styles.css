@@ -32,11 +32,19 @@
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --default-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.2);
   --default-btn-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.2);
+  
+  /* FIXME: Revisar estos shadows 
+    --theme-elements-boxShadow-card: 0px 0px 3px rgba(0, 0, 0, 0.75), 0px 17px 24px rgba(0, 0, 0, 0.3);
+    --theme-elements-boxShadow-tight: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 3px 3px rgba(0, 0, 0, 0.3);
+  */
 
   --accessible-border: 1px solid transparent;
   --default-radious-border: 0.35rem;
+  --defautl--row-gap: 0 0.625em; /* 0.625em = 10px*/
+  --defautl--colum-gap: 0.625em 0; /* 0.625em = 10px*/
 
   --min-width: 250px;
+  --max-width: 92.5vw;
 }
 /** Estilos Globales **/
 /* Reset */
@@ -64,12 +72,13 @@ body {
   align-items: center;
   flex-direction: column;
 }
-body > *:not(:last-child){
+body > *:not(:last-child) {
   margin-bottom: 1rem;
 }
 header {
-  width: 100%;
-  height: auto;
+  background-color: pink;
+  max-width: 92.5vw;
+  height: auto; /* FIXME: CORREGIR ESTO PORQUE SE VA A LA MIERDA */
   padding-top: 0.5em;
 }
 nav {
@@ -79,14 +88,13 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  gap: 0.5em 0;
-  /* font-size: 0.9rem; */
+  gap: var(--defautl--colum-gap);
   font-size: calc(0.75rem + 0.5vw);
   font-weight: 600;
 }
 main {
   min-width: var(--min-width);
-  max-width: calc(100% - 36px);
+  max-width: var(--max-width);
   height: 100%;
 }
 section {
@@ -95,7 +103,7 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 7.5em repeat(3, auto); /*7.5em */
-  gap: 1em 0;
+  gap: calc(1em + 1vw) 0;
   justify-items: center;
   align-items: flex-start;
 }
@@ -127,17 +135,13 @@ footer {
   background-color: var(--clr-grey-4);
   width: 100%;
   min-width: var(--min-width);
-  height: 8vh;
-  gap: 1em 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.875rem;
-  font-weight: 300;
+  height: 9vh;
+  font-size: 0.75rem;
+  font-weight: 400;
   color: var(--clr-snow);
-  text-align: right;
+  text-align: right;  
+  display: flex;
+  justify-content: center;
 }
 
 p,
@@ -168,14 +172,11 @@ li {
 }
 /* header */
 .logo {
-  grid-area: 1 / 1 / 2 / 2;
   position: relative;
   left: 47%;
-transform: translateX(-50%);
-  /* right: 1em; */
+  transform: translateX(-50%);
 }
 .links {
-  grid-area: 2 / 1 / 3 / 2;
   min-width: var(--min-width);
   max-width: 350px;
   width: calc(100% - 36px);
@@ -189,6 +190,7 @@ transform: translateX(-50%);
 .links a {
   color: var(--clr-mjr);
 }
+/* main */
 .section-hero {
   grid-area: 1 / 1 / 2 / 2;
   width: auto;
@@ -224,17 +226,18 @@ input[type="email"] {
 .section-features {
   grid-area: 2 / 1 / 3 / 2;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5em 0;
+  gap: var(--defautl--colum-gap);
 }
 .feature-container {
   /* div para cada feature */
   width: 100%;
   min-height: 5rem;
+  height: 100%;
   display: grid;
   padding: 0.3em 1em 0.6em 1em;
   grid-template-columns: 1fr;
@@ -262,8 +265,8 @@ input[type="email"] {
   grid-area: 2 / 1 / 3 / 2;
   width: 100%;
   height: 100%;
-  font-size: 1.1rem;
   font-weight: 700;
+  text-decoration: underline;
 }
 .section-features div p {
   /* description */
@@ -276,20 +279,29 @@ input[type="email"] {
 .section-video {
   overflow: hidden;
   grid-area: 3 / 1 / 4 / 2;
+
   width: 100%;
-  min-height: 150px;
-  height: calc(calc((100vw - 36px) / 907) * 511);
-  background-color: var(--clr-white);
+  max-width: 1025px;
+  height: 100%;
+  max-height: 425px;
+  
+  position: relative; /* texto dentro de el contendor */
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (dividimos 9 en 16 = 0.5625)  */
+  
   border-radius: 1.25em;
   box-shadow: var(--default-shadow);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 iframe {
-  /* video */
   width: 100%;
+  max-width: 1025px;
   height: 100%;
+
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .section-pricing {
@@ -300,13 +312,13 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5em 0;
+  gap: var(--defautl--colum-gap);
 }
 .pricing-container {
   width: 100%;
   height: auto;
   display: flex;
-  gap: 0.6em 0;
+  gap: var(--defautl--colum-gap);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -321,7 +333,6 @@ iframe {
   border-radius: 0.35rem 0.35rem 0 0;
   box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.02);
   text-align: center;
-  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -341,102 +352,174 @@ iframe {
 
 /* Footer */
 .content-width {
-  width: 90%;
   min-width: var(--min-width);
+  width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.content-width > * {
+  background-color: rebeccapurple;
+  min-width: var(--min-width);
+  width: calc(50% - 15vw);
+}
+.content-width ul {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  gap: 0 1em;
 }
 .links-footer {
   color: white;
 }
-.content-width li:nth-child(1) {
+.content-width ul li:nth-child(1) {
   margin-right: auto;
 }
-.content-width li:nth-last-child(1) {
+.content-width ul li:nth-last-child(1) {
   margin-left: auto;
 }
-footer span {
-  font-size: 0.6875em;
+.span-footer {
+  font-size: 0.719em;
 }
 
 /* TODO: Nos quedamos aca */
+
 /*
-  change te html px 
-  defualt px to rem
-  https://www.w3schools.com/css/css_units.asp
-  tablets 18px
-  laptops 24px
-  desktops 36px
+  600 
+  768
+  1025
+  1200
+  1920
 
-
+  max-width: calc(100% - 5.5vw);
 */
 
-/* Small devices (portrait tablets and large phones, 600px and up) 
+/* Small devices (Tablets portables y celulares, >= 600px)  */
 @media screen and (min-width: 37.5em) {
-  h1 {
-    font-size: 1.9rem;
+  html {
+    transition: font-size 0.5s ease-in-out;
+    font-size: 18px;
   }
-  .subtitle {
-    font-size: 0.95rem;
+  body > *:not(:last-child) {
+    transition: height 0.35s ease-in-out, max-width 0.35s ease-in-out, width 0.35s ease-in-out;
+  }
+  main, header, .content-width  {
+    max-width: 87.5vw;
   }
 }
 
-/* Medium devices (Small screens, laptops, 768px and up) 
+/* Medium devices (Patallas chicas, notbooks, >= 768px)  */
 @media screen and (min-width: 48em) { 
-  h1 {
-    font-size: 2.2rem;
+  html {
+    font-size: 20px;
   }
-  .subtitle {
-    font-size: 1rem;
+  main, .content-width  {
+    max-width: 80vw;
   }
-
+  header {
+    width: 90%;
+    max-width: 90%;
+  }
+  /* header */
+  nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0 0;
+  }
+  .logo {
+    /* background-color: orange; */
+    grid-area: 1 / 1 / 2 / 2;
+    position: relative;
+    left: 18.5vh;
+    transform: translateX(-50%);
+    max-width: 365px;
+  } 
+  .links {
+    grid-area: 1 / 2 / 2 / 3;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-inline: 0em;
+  }
+  .nav-bar .links li:nth-child(1) {
+    margin-right: auto;
+  } 
+  .nav-bar .links li:nth-last-child(1) { 
+    margin-left: auto;
+  } 
+  p, ol {
+    line-height: 1;
+    text-align: left;
+  }
+  /* footer */
+  .content-width {
+    /* max-width: 670px; */
+  }
 }
-  
-/* Extra large devices (large laptops and desktops, 1025px and up) 
+
+/* Extra large devices (Notbooks grandes y monitores de escritorio, >= 1025px) */
 @media screen and (min-width: 64.0625em) { 
-  h1 {
-    font-size: 2.5rem;
+  html {
+    font-size: 22px;
   }
-  .subtitle {
-    font-size: 1.05rem;
+  main {
+    width: 80vw;  /* FIXME: */
+    max-width: 1025px;
+  }
+  header {
+    max-width: 1025px;
+  }
+  footer {
+    height: 12vh;
+  }
+  .section-features, .section-pricing {
+    flex-direction: row;
+    gap: var(--defautl--row-gap); /* 0.625em = 10px*/
+    transition: flex-direction 2.5s ease-in-out;
+  }
+  .feature-container {
+    padding: 0.8125em;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1, auto) 1fr;
+  }
+  .section-features div h3 {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .svg-container {
+    grid-area: 1 / 2 / 2 / 3; 
+    display: none;
+  }
+  .section-features div p {
+    grid-area: 2 / 1 / 3 / 3;
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) 
-@media screen and (min-width: 75em) {  
-  h1 {
-    font-size: 2.7rem;
+
+
+/* TODO: aca 
+  Que pare de creser aca, creo q se va a ver bien con este max
+  Achicar el video porq esta re grande ajksjsa
+*/
+
+/* Extra large devices (large laptops and desktops, 1200px and up)  */
+/* @media screen and (min-width: 75em) {  
+  main {
+    max-width: 50vw; // FIXME: //
   }
-  .subtitle {
-    font-size: 1.13rem;
-  }
-}
+} */
 
 /* Defualt desktop (1920px and up) 
 @media screen and (min-width: 120em) {
-  header {
-    padding-top: 1%;
+  main, header {
+    /* max-width: calc(100% - 45.5vw); 
   }
-  h1 {
-    font-size: 3em;
-  }
-  .subtitle {
-    font-size: 1.3em
-  }
-  .name-label, .email-label, .age-label, p  {
-    font-size: 1.1em;
-  }
-  label, textarea {
-    font-size: 0.9em;
-  }
-  textarea {
-    padding-block: 0.5em;
-  }
-
-  
 }
+**/
+
 
 /* -- Vertical Adjus, 1200px and less) --
 @media screen and (max-height: 46.875em) { 
