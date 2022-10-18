@@ -86,6 +86,7 @@ nav {
   gap: var(--defautl--colum-gap);
   font-size: calc(0.60rem + 0.5vw);
   font-weight: 600;
+  position: fixed;
 }
 main {
   min-width: var(--min-width);
@@ -379,6 +380,9 @@ iframe {
   html {
     transition: font-size 0.35s ease-in-out;
     font-size: 18px;
+  }
+  nav {
+    position: static; /*TODO: Revisar el position fixed */
   }
   body > *:not(:last-child) {
     transition: height 0.35s ease-in-out, max-width 0.35s ease-in-out, width 0.35s ease-in-out;
