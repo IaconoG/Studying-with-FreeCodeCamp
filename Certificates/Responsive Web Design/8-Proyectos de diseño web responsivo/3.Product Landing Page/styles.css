@@ -32,11 +32,7 @@
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --default-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.2);
   --default-btn-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.2);
-  
-  /* FIXME: Revisar estos shadows 
-    --theme-elements-boxShadow-card: 0px 0px 3px rgba(0, 0, 0, 0.75), 0px 17px 24px rgba(0, 0, 0, 0.3);
-    --theme-elements-boxShadow-tight: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 3px 3px rgba(0, 0, 0, 0.3);
-  */
+
 
   --accessible-border: 1px solid transparent;
   --default-radious-border: 0.35rem;
@@ -76,9 +72,8 @@ body > *:not(:last-child) {
   margin-bottom: 1rem;
 }
 header {
-  background-color: pink;
   max-width: 92.5vw;
-  height: auto; /* FIXME: CORREGIR ESTO PORQUE SE VA A LA MIERDA */
+  height: auto; 
   padding-top: 0.5em;
 }
 nav {
@@ -89,7 +84,7 @@ nav {
   justify-content: center;
   align-content: center;
   gap: var(--defautl--colum-gap);
-  font-size: calc(0.75rem + 0.5vw);
+  font-size: calc(0.60rem + 0.5vw);
   font-weight: 600;
 }
 main {
@@ -99,11 +94,11 @@ main {
 }
 section {
   width: 100%;
-  max-height: auto; /* FIXME Revisar esto max-height*/
+  max-height: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 7.5em repeat(3, auto); /*7.5em */
-  gap: calc(1em + 1vw) 0;
+  grid-template-rows: 7.5em repeat(3, auto); 
+  gap: calc(1em + 1vw);
   justify-items: center;
   align-items: flex-start;
 }
@@ -204,7 +199,6 @@ li {
   padding-inline: 1em;
 }
 .form-title {
-  /* font-size: 1.5rem; */
   font-size: calc(1.25rem + 1vw);
   font-weight: 700;
 }
@@ -295,7 +289,7 @@ iframe {
   width: 100%;
   max-width: 1025px;
   height: 100%;
-
+  max-height: 576px;
   
   position: absolute;
   top: 0;
@@ -360,7 +354,6 @@ iframe {
   align-items: flex-end;
 }
 .content-width > * {
-  background-color: rebeccapurple;
   min-width: var(--min-width);
   width: calc(50% - 15vw);
 }
@@ -381,22 +374,10 @@ iframe {
   font-size: 0.719em;
 }
 
-/* TODO: Nos quedamos aca */
-
-/*
-  600 
-  768
-  1025
-  1200
-  1920
-
-  max-width: calc(100% - 5.5vw);
-*/
-
 /* Small devices (Tablets portables y celulares, >= 600px)  */
 @media screen and (min-width: 37.5em) {
   html {
-    transition: font-size 0.5s ease-in-out;
+    transition: font-size 0.35s ease-in-out;
     font-size: 18px;
   }
   body > *:not(:last-child) {
@@ -428,7 +409,6 @@ iframe {
     gap: 0 0;
   }
   .logo {
-    /* background-color: orange; */
     grid-area: 1 / 1 / 2 / 2;
     position: relative;
     left: 18.5vh;
@@ -454,19 +434,15 @@ iframe {
     line-height: 1;
     text-align: left;
   }
-  /* footer */
-  .content-width {
-    /* max-width: 670px; */
-  }
 }
 
-/* Extra large devices (Notbooks grandes y monitores de escritorio, >= 1025px) */
+/* Extra large devices (Notbooks grandes y monitores de escritorio, >= 1025px and up) */
 @media screen and (min-width: 64.0625em) { 
-  html {
-    font-size: 22px;
+  p, .pricing-container li {
+    font-size: 0.75rem;
   }
   main {
-    width: 80vw;  /* FIXME: */
+    width: 75vw; 
     max-width: 1025px;
   }
   header {
@@ -484,7 +460,7 @@ iframe {
     padding: 0.8125em;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(1, auto) 1fr;
+    grid-template-rows: 20% auto;
   }
   .section-features div h3 {
     grid-area: 1 / 1 / 2 / 3;
@@ -496,36 +472,105 @@ iframe {
   .section-features div p {
     grid-area: 2 / 1 / 3 / 3;
   }
+  /* Limitar el contenedor del iframe en 576px */
+  .section-video {
+    padding-top: clamp(0%, 56.25%, 576px);
+  }
+  /* Footer */
+  .content-width {
+    max-width: 1025px;
+  }
+  
 }
 
-
-
-/* TODO: aca 
-  Que pare de creser aca, creo q se va a ver bien con este max
-  Achicar el video porq esta re grande ajksjsa
-*/
-
-/* Extra large devices (large laptops and desktops, 1200px and up)  */
-/* @media screen and (min-width: 75em) {  
+/* ( >= 1200px ) */
+@media screen and (min-width: 75em) {  
+  html {
+    font-size: 22px;
+    transition: font-size 0.35s ease-in-out;
+  }
+   /* header */
+  header {
+    transition: width 0.35s ease-in-out, max-width 0.35s ease-in-out, padding-top 0.35s ease-in-out;
+    width: 95%;
+    max-width: 100%;
+    padding-top: 0;
+    margin-top: 00.35rem;
+  }
+  .logo {
+    transition: left 0.35s ease-in-out, max-width 0.35s ease-in-out;
+    left: 30vh;
+    transform: translateX(-50%);
+    max-width: calc(400px + 5vw);
+  } 
+  .links {
+    transition: justify-content 0.35s ease-in-out, gap 0.35s ease-in-out;  
+    justify-content: flex-end;
+    gap: 0.625em;
+  }
+  .nav-bar .links li {
+    transition: margin-right 0.35s ease-in-out, margin-left 0.35s ease-in-out;
+  }
+  .nav-bar .links li:nth-child(1) {
+    margin-right: 0;
+  } 
+  .nav-bar .links li:nth-last-child(1) { 
+    margin-left: 0;
+  } 
+  
+  /* - */
   main {
-    max-width: 50vw; // FIXME: //
+    width: 85vw;  
+    max-width: 1919px;
   }
-} */
+  section {
+    transition: gap 0.35s ease-in-out;
+    gap: calc(3em + 1vw);
+    margin-block: 2em;
+  }
+  .section-features, .section-pricing {
+    max-width: 1025px;
+  }
+  .feature-container {
+    padding-block: 1em;
+    padding-inline: 1em;
+    gap: 0.5em;
+  }
+  .pricing-container h3 {
+    padding-block: 1.5em;
+  }
+  .pricing-container p {
+    padding-top: 1em;
+  }
+  .pricing-container .btn {
+    margin-block: 1.5em;
+  }
+  
+}
 
-/* Defualt desktop (1920px and up) 
-@media screen and (min-width: 120em) {
-  main, header {
-    /* max-width: calc(100% - 45.5vw); 
+/* ( >= 768px widht ) */
+@media screen and (min-height: 64em) and (min-width: 48em) {
+  .logo {
+    left: 12.5vh;
   }
 }
-**/
 
-
-/* -- Vertical Adjus, 1200px and less) --
-@media screen and (max-height: 46.875em) { 
-  main {
-    height: 40em;
-    margin-bottom: 1rem;
+/* ( >= 1080px height ) */
+@media screen and (min-height:  67.5em) and (min-width: 64.0625em) {  
+  html {
+    transition: font-size 0.35s ease-in-out;
+  }
+  .logo {
+    left: 17.5vh;
+  }
+  .feature-container {
+    padding: 0.8125em;
+    grid-template-rows: 10% auto;
+  }
+  p {
+    font-size: 1em;
+  }
+  .pricing-container li {
+    font-size: 0.875rem;
   }
 }
-*/
