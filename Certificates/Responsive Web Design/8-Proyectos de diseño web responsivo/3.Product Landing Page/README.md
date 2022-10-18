@@ -3,8 +3,7 @@ Objective: Build an app that is functionally similar to https://product-landing-
 
 
 # Inspiration
-  - https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/7fb5efd1-fd6a-4829-a5f8-b0d4b4a03343/12-colour-in-practice-greyscale-opt.jpg
-
+  - 
   
 # Paginas usadas
 
@@ -17,5 +16,7 @@ Objective: Build an app that is functionally similar to https://product-landing-
 ## Colores
   - https://html-color.codes/css/whitesmoke
 
-
+## Aspect Ratio para el video
+  - https://www.w3.org/TR/css3-images/#aspect-ratio
+  - https://www.w3schools.com/howto/howto_css_aspect_ratio.asp
 
