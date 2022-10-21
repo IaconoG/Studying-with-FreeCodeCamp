@@ -17,3 +17,12 @@ Objetivo: Crea una aplicación que funcione similar a https://technical-document
   - https://www.w3.org/TR/css3-images/#aspect-ratio
   - https://www.w3schools.com/howto/howto_css_aspect_ratio.asp
 
+
+
+## Accesibilidad
+### [A11y Accecibility](https://kittygiraudel.com/2020/12/01/a11y-advent-calendar/)
+### Anchors
+  - https://amberwilson.co.uk/blog/are-your-anchor-links-accessible/
+
+### Ocultando elementos para lectores de pantalla
+  - https://kittygiraudel.com/2020/12/03/a11y-advent-hiding-content/
