@@ -103,7 +103,7 @@ pre {
   list-style: none;
   border-bottom: 1px solid #ccc;
 }
-.links {
+.nav-link {
   font-size: 0.875rem;
   cursor: pointer;
 }
@@ -122,6 +122,10 @@ pre {
 }
 .main-section .heading {
   text-align: left;
+  font-size: 1.5em; 
+  font-weight: bold;
+  text-decoration: underline #ccc;
+
 }
 .main-section article {
   width: 100%;
