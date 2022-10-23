@@ -13,10 +13,6 @@ Objetivo: Crea una aplicación que funcione similar a https://technical-document
 ## Colores
   - https://html-color.codes/css/whitesmoke
 
-## Aspect Ratio para el video
-  - https://www.w3.org/TR/css3-images/#aspect-ratio
-  - https://www.w3schools.com/howto/howto_css_aspect_ratio.asp
-
 
 
 ## Accesibilidad
