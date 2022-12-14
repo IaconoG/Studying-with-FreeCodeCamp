@@ -1,0 +1,219 @@
+
+/** Variabels **/
+:root {
+  /* Colors */
+  /* todo: elegir colores q va a tener la pagina  */
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+
+  --ff-primary: 'Poppins', sans-serif;
+  --ff-secundary: 'Raleway', sans-serif;
+
+  --light-shadow: 0 5px 20px rgba(0, 0, 0, 0.01);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --default-shadow: 0px 1px 15px -2px rgba(0, 0, 0, 0.7);
+
+  --accessible-border: 1px solid transparent;
+  --default-radious-border: 0.4rem;
+}
+
+/** Reset styles **/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: var(--ff-primary); /* todo: select a default font */
+  line-height: 1.4;
+  color: var(--main-white);
+  scroll-behavior: smooth;
+}
+h1, h2 {
+  font-size: var(--ff-secundary); 
+  font-weight: 700;
+  text-align: center;
+}
+h1 {
+  font-size: 6rem;
+  text-transform: capitalize;
+}
+h2 {
+  font-size: 4.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+ul {
+  list-style: none;
+}
+
+
+/* todo: select a fonts for: default, h1, h2 */
+/* todo: set some font-sizes at different screen sizes */
+
+/* style scrollbar */
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d4aa70;
+  border-radius: 100px;
+}
+
+/* .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+} */
+
+/** Estilos de elemetnos **/
+
+body {
+  font-size: 1.6rem;
+  overflow: overlay; /* for the scrollbar */    
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  height: auto;
+}
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--main-red);
+  box-shadow: var(--default-shadow);
+}
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+.nav-list a {
+  display: block;
+  padding-block: 2rem;
+  padding-inline: 1.3rem;
+  
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+/* MAIN SECTION */
+.welcome-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--main-gray);
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+.welcome-section .welcome-subtitle {
+  font-size: 2.5rem;
+  font-weight: 200;
+  text-transform: lowercase;
+  font-style: italic;
+  color: var(--main-red);
+}
+
+/* PROJECTS SECTION */
+.projects-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 5rem;
+
+  text-align: center;
+  padding: 10rem 2rem;
+  background-color: var(--main-blue);
+  width: 100%;
+  height: auto;
+}
+.projects-section-header { 
+  grid-area: 1 / 1 / 2 / 2;
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-title-header {
+  border-bottom: 0.2rem solid var(--main-white);
+}
+.projects-grid { 
+  grid-area: 2 / 1 / 3 / 2;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4rem 3rem;
+}
+.project {
+  width: 100%;
+  min-width: 400px;
+  max-width: 600px;
+  height: 900px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90% 10%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+iframe {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 100%;
+  border-style: none;
+}
+.project iframe:first-child { 
+  overflow: hidden;
+}
+
+
+.project-title {
+  grid-area: 2 / 1 / 3 / 2;  
+  height: 100%;
+  width: 100%;
+  /* paddin for center text vertical */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-gray);
+  font-size: 3.2rem;
+}
+
+/* CONTACT SECTION */
+
+/* FOOTER */
