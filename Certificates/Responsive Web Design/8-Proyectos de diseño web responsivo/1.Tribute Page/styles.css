@@ -65,6 +65,20 @@ h2 {
   text-transform: uppercase;
 }
 
+/* style scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e4e4e4a9;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #573c1e;
+  border-radius: 100px;
+}
 
 /* ---------- */
 header {
