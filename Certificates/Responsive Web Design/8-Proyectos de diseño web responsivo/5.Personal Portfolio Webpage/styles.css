@@ -2,12 +2,18 @@
 /** Variabels **/
 :root {
   /* Colors */
-  /* todo: elegir colores q va a tener la pagina  */
   --main-white: #f0f0f0;
-  --main-red: #be3144;
-  --main-blue: #45567d;
+  --main-gray-ligth: #F5F5F5;
   --main-gray: #303841;
-
+  
+  /* Palet colors generated */
+  --cl-first-blue: #0b4f60; /* 60% */
+  --cl-first-blue-purple: #45567d;
+  --cl-first-maroon: #643c4e; /* 30% */
+  --cl-first-olive: #484A2A; /* 10% */
+  --cl-second-olive: #82802C;
+  --cl-third-olive: #8F993F;
+  
   --ff-primary: 'Poppins', sans-serif;
   --ff-secundary: 'Raleway', sans-serif;
 
@@ -50,7 +56,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: var(--main-color);
+  color: var(--main-gray-ligth) ;
 }
 ul {
   list-style: none;
@@ -106,7 +112,7 @@ nav {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: var(--main-red);
+  background-color: var(--cl-first-maroon);
   box-shadow: var(--default-shadow);
 }
 .nav-list {
@@ -136,13 +142,17 @@ nav {
   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
 }
 .welcome-section .welcome-subtitle {
-  font-size: 2.5rem;
   font-weight: 200;
   text-transform: lowercase;
   font-style: italic;
-  color: var(--main-red);
+  color: var(--cl-second-olive);
 }
-
+.welcome-section {
+  font-size: 2.5rem;
+}
+.welcome-subtitle {
+  font-size: 3.5rem;
+}
 /* PROJECTS SECTION */
 .projects-section {
   display: grid;
@@ -153,7 +163,7 @@ nav {
 
   text-align: center;
   padding: 10rem 2rem;
-  background-color: var(--main-blue);
+  background-color: var(--cl-first-blue);
   width: 100%;
   height: auto;
 }
@@ -165,9 +175,30 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.project-title-header {
-  border-bottom: 0.2rem solid var(--main-white);
+
+.project-title-header::before {
+  content: "";
+  border-bottom: 0.2rem solid var(--cl-second-olive);
+  position: absolute;
+  width: 100%;
+  min-width: 400px;
+  max-width: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -225px;
+  transition: width 2s;
 }
+/* todo: con una media query cambiar el max width a 600px y  el bottom para q quede mejor (seguro -20%) */
+@media screen and (min-width: 685px) {
+  .project-title-header::before {
+    max-width: 600px;
+    bottom: -165px;
+  }
+}
+  
+
+
+
 .projects-grid { 
   grid-area: 2 / 1 / 3 / 2;
   width: 100%;
