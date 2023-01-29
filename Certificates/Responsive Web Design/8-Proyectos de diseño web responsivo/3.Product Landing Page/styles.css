@@ -86,7 +86,7 @@ nav {
   gap: var(--defautl--colum-gap);
   font-size: calc(0.60rem + 0.5vw);
   font-weight: 600;
-  position: fixed; /* FIXME: Cambiar por REALTIVE */
+  position: relative; 
 }
 main {
   min-width: var(--min-width);
@@ -382,7 +382,7 @@ iframe {
     font-size: 18px;
   }
   nav {
-    position: static; /*TODO: Revisar el position fixed */
+    position: relative;
   }
   body > *:not(:last-child) {
     transition: height 0.35s ease-in-out, max-width 0.35s ease-in-out, width 0.35s ease-in-out;
@@ -415,7 +415,7 @@ iframe {
   .logo {
     grid-area: 1 / 1 / 2 / 2;
     position: relative;
-    left: 18.5vh;
+    left: 36.5vh;
     transform: translateX(-50%);
     max-width: 365px;
   } 
@@ -579,9 +579,3 @@ iframe {
   }
 }
 
-
-
-/* TODO: En 786px el header se ve mal, cambiar el espaciodo entre links */
-
-/* TODO: En 425px y <, El header se mueve completamente */
-/* FIXME: Camiar el position FIXED por RELATIVE*/

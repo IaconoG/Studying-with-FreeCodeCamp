@@ -205,3 +205,6 @@ pre {
     grid-template-columns: 24% 76%;
   }
 }
+
+/* TODO: Reducir el ancho de del nav  */
+/* FIXME: Cambiar el % de columna del nav en el grid padre */

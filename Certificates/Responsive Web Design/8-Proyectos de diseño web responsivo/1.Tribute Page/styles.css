@@ -64,7 +64,6 @@ h2 {
   font-size: 3.5rem;
   text-transform: uppercase;
 }
-
 /* style scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -130,7 +129,6 @@ header {
     align-items: center;
   }
     figure {
-      max-width: 90%;
       display: flex;
       flex-direction: column;
 
@@ -348,9 +346,6 @@ article {
         justify-self: center;
         align-self: center;
       }
-        #img-div {
-          width: 55vw;
-        }
           #image {
             border-radius: 1rem 1rem;
           }
@@ -491,7 +486,6 @@ article {
       font-size: 0.8vw;
 
     }
-
     figure {
       width: 50rem;
     }
@@ -499,8 +493,4 @@ article {
       width: 80%;
       font-size: 1.3rem;
     } 
-
-    article {
-
-    }
   }
