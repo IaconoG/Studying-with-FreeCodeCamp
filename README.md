@@ -9,7 +9,7 @@ En este repositorio ire subiendo todo lo trabajado con freeCodeCamp.
 ## Certificados a realizar
 
 - [x] [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/GianIacono/javascript-algorithms-and-data-structures)
-- [ ] Responsive Web Design
+- [x] Responsive Web Design
 - [ ] Front End Development Libraries
 - [ ] Back End Development and APIs
 
