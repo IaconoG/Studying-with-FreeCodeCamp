@@ -1,0 +1,117 @@
+<!-- Haz que los elementos solo sean visibles para un lector de pantalla mediante CSS personalizado -->
+
+
+<!-- 
+  No haber usado css para la accesibilida muetra la importancia de utilizar un esquema de documento lógico y etiquetas semánticamente significativas alrededor de su contenido antes de introducir el aspecto de diseño visual.
+
+  CSS se utiliza para colocar los elementos exclusivos de lector de pantalla fuera del área visual de la ventana del navegador
+    - Esto sucede cuando la información está en un formato visual (como un gráfico), pero los usuarios del lector de pantalla necesitan una presentación alternativa (como una tabla) para acceder a los datos.
+
+    .sr-only {
+      position: absolute;
+      left: -10000px;
+      width: 1px;
+      height: 1px;
+      top: auto;
+      overflow: hidden;
+    }
+
+  Notas:
+    - display: none; o visibility: hidden; 
+      - oculta el contenido para todos, incluidos los usuarios del lector de pantalla
+
+    - Los valores cero para los tamaños del píxel, como width: 0px; height: 0px; 
+      - eliminan ese elemento del flujo de tu documento, lo que significa que los lectores de pantalla lo ignorarán
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  La tabla ya tiene una clase sr-only, pero las reglas de CSS aún no se han completado. Asigna a position un valor absolute, a left un valor de -10000px, y tanto a width como a height un valor de 1px.
+-->
+
+<head>
+  <style>
+  .sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Training</h1>
+    <nav>
+      <ul>
+        <li><a href="#stealth">Stealth &amp; Agility</a></li>
+        <li><a href="#combat">Combat</a></li>
+        <li><a href="#weapons">Weapons</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>Master Camper Cat's Beginner Three Week Training Program</h2>
+    <figure>
+      <!-- La tabla de barras apiladas de entrenamiento semanal -->
+      <p>[Stacked bar chart]</p>
+      <br />
+      <figcaption>Breakdown per week of time to spend training in stealth, combat, and weapons.</figcaption>
+    </figure>
+    <table class="sr-only">
+      <caption>Hours of Weekly Training in Stealth, Combat, and Weapons</caption>
+      <thead>
+        <tr>
+          <th></th>
+          <th scope="col">Stealth &amp; Agility</th>
+          <th scope="col">Combat</th>
+          <th scope="col">Weapons</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Week One</th>
+          <td>3</td>
+          <td>5</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <th scope="row">Week Two</th>
+          <td>4</td>
+          <td>5</td>
+          <td>3</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <th scope="row">Week Three</th>
+          <td>4</td>
+          <td>6</td>
+          <td>3</td>
+          <td>13</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="stealth">
+    <h2>Stealth &amp; Agility Training</h2>
+    <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+    <article><h3>No training is NP-complete without parkour</h3></article>
+  </section>
+  <section id="combat">
+    <h2>Combat Training</h2>
+    <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
+    <article><h3>Goodbye, world: 5 proven ways to knock out an opponent</h3></article>
+  </section>
+  <section id="weapons">
+    <h2>Weapons Training</h2>
+    <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
+    <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+  </section>
+  <footer>&copy; 2018 Camper Cat</footer>
+</body>

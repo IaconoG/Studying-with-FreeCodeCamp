@@ -1,0 +1,60 @@
+<!-- Haz que el movimiento sea más natural usando una curva de Bezier -->
+
+
+<!-- 
+  La función animation-timing-function se realiza automáticamente en cada fotograma clave (keyframe) cuando el animation-iteration-count se establece en infinito.
+  Dado que hay una regla de fotogramas clave establecida en el medio de la duración de la animación (en 50%, da como resultado dos progresiones de animación idénticas en el movimiento hacia arriba y hacia abajo de la pelota.
+
+  La siguiente curva cúbica de Bezier simula el movimiento de rebotes:
+
+    - cubic-bezier(0.3, 0.4, 0.5, 1.6);
+
+  Observa que el valor de y2 es mayor que 1.
+  Aunque la curva cúbica de Bezier se mapea en un sistema de coordenadas 1 por 1, y solo puede aceptar valores x de 0 a 1, el valor y se puede establecer en números mayores que uno. 
+  Esto da como resultado un movimiento de rebote que es ideal para simular la pelota rebotando.
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Cambia el valor de la función animation-timing-function del elemento con el id de green a una función cubic-bezier con valores x1, y1, x2, y2 establecidos respectivamente en 0.311, 0.441, 0.444, 1.649.
+-->
+
+
+<style>
+  .balls {
+    border-radius: 50%;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 60%;
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #red {
+    background: red;
+    left: 25%;
+    animation-timing-function: linear;
+  }
+  #blue {
+    background: blue;
+    left: 50%;
+    animation-timing-function: ease-out;
+  }
+  #green {
+    background: green;
+    left: 75%;
+    animation-timing-function: cubic-bezier(0.311, 0.441, 0.444, 1.649); 
+  }
+
+  @keyframes jump {
+    50% {
+      top: 10%;
+    }
+  }
+</style>
+<div class="balls" id="red"></div>
+<div class="balls" id="blue"></div>
+<div class="balls" id="green"></div>

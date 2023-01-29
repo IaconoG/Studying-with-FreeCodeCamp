@@ -1,0 +1,67 @@
+<!-- Crea diseños flexibles usando auto-fill -->
+
+
+<!-- 
+  La función de repetición viene con una opción llamada auto-fill. 
+  Esto te permite insertar automáticamente tantas filas o columnas del tamaño deseado como sea posible, dependiendo del tamaño del contenedor.
+
+    - repeat(auto-fill, minmax(60px, 1fr));
+
+  Cuando el tamaño del contenedor cambia, esta configuración sigue insertando columnas de 60px y estirándolas hasta que pueda insertar otra
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  En la primera cuadrícula (grid), usa auto-fill con repeat para rellenar la cuadrícula con columnas que tengan un ancho mínimo de 60px y máximo de 1fr.
+  Luego, cambia el tamaño de la vista previa para ver auto-fill en acción.
+-->
+
+<style>
+  .item1{background:LightSkyBlue;}
+  .item2{background:LightSalmon;}
+  .item3{background:PaleTurquoise;}
+  .item4{background:LightPink;}
+  .item5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    min-height: 100px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    /* Cambia solo el código debajo de esta línea */
+
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+
+    /* Cambia solo el código encima de esta línea */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .container2 {
+    font-size: 40px;
+    min-height: 100px;
+    width: 100%;
+    background: Silver;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(60px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+</style>
+<div class="container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+</div>
+<div class="container2">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+</div>

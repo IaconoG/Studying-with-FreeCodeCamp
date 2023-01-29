@@ -1,0 +1,37 @@
+<!-- Cambia la posición relativa de un elemento -->
+
+
+<!-- 
+  Cuando la posición de un elemento se establece a relative, te permite especificar como CSS lo moverá relativo a su posición actual dentro del flujo normal de la página. 
+
+  Se empareja con las propiedades de desplazamiento CSS de left o right, y top o bottom
+  Estas dicen cuántos pixeles, porcentajes, o ems se debe mover el elemento lejos de donde esté normalmente posicionado.
+
+    p {
+      position: relative;
+      bottom: 10px;
+    }
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Cambia la propiedad position de h2 a relative, y usa CSS desplazamiento para moverlo 15 pixeles lejos de la parte superior top donde se ubica dentro del flujo normal.
+  
+  Observa que no hay impacto en las posiciones de los elementos h1 y p que están al rededor.
+-->
+
+
+<style>
+  h2 {
+    position: relative;
+    top: 15px;
+
+  }
+</style>
+<body>
+  <h1>On Being Well-Positioned</h1>
+  <h2>Move me!</h2>
+  <p>I still think the h2 is where it normally sits.</p>
+</body>

@@ -1,0 +1,35 @@
+<!-- Prioriza un estilo por sobre otro -->
+
+
+<!-- 
+  A veces los elementos HTML reciben múltiples estilos que entran en conflicto entre sí.
+
+  Veamos qué ocurre cuando creamos una clase que hace que el texto sea rosado ("pink"), y luego se la aplicamos a un elemento. ¿Sobreescribirá nuestra clase la prioridad CSS color: green; del elemento body?
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Crea una clase CSS adicional llamada pink-text que asigne a un elemento el color rosado ("pink").
+
+  Asigna a tu elemento h1 la clase pink-text.
+-->
+
+
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text {
+    color: pink;
+  }
+</style>
+<h1 class="pink-text">Hello World!</h1>
+
+
+<!--
+  ¡Nuestra clase pink-text sobrescribió la declaración CSS de nuestro elemento body!
+-->

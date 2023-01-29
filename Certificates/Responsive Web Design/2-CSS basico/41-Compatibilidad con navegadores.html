@@ -1,0 +1,27 @@
+<!-- Compatibilidad con navegadores -->
+
+
+<!-- 
+
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Parece que en este código se utiliza una variable para establecer el color de fondo de la clase .red-box. 
+  Mejoremos la compatibilidad de nuestro código con otros navegadores, añadiendo otra declaración de background justo antes de la declaración existente, y estableciendo este valor de respaldo como red (rojo).
+-->
+
+<style>
+  :root {
+    --red-color: red;
+  }
+  .red-box {
+    background: red;
+    background: var(--red-color);
+    height: 200px;
+    width:200px;
+  }
+</style>
+<div class="red-box"></div>

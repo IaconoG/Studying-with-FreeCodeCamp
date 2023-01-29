@@ -1,0 +1,41 @@
+<!-- Cambia la posición de los elementos superpuestos con la propiedad z-index -->
+
+
+<!-- 
+  z-index
+  Cuando los elementos son posicionados para superponerse position: absolute | relative | fixed | sticky
+  El elemento que viene después dentro del marcado HTML aparecerá, por defecto, encima de los otros elementos.
+
+  Sin embargo, la propiedad z-index puede especificar el orden de cómo los elementos están apilados unos sobre otros.
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Agrega una propiedad z-index al elemento con la clase first (el rectángulo rojo) y asígnale un valor de 2 para que cubra al otro elemento (rectángulo azul).
+-->
+
+<style>
+  div {
+    width: 60%;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  .first {
+    background-color: red;
+    position: absolute;
+    z-index: 2;
+  }
+  .second {
+    background-color: blue;
+    position: absolute;
+    left: 40px;
+    top: 50px;
+    z-index: 1;
+  }
+</style>
+
+<div class="first"></div>
+<div class="second"></div>

@@ -1,0 +1,36 @@
+<!-- Sobreescribe declaraciones de clase con inline styles (estilos en línea) -->
+
+
+<!-- 
+  Hemos demostrado que las declaraciones de id tienen prioridad por sobre las declaraciones de clase, independientemente de dónde hayan sido declaradas en el código CSS del elemento style.
+
+  inline style tiene mas prioridad
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Usa un inline style para hacer que nuestro elemento h1 sea de color blanco. Recuerda, los estilos en línea se ven así:
+
+    <h1 style="color: green;">
+  Deja las clases blue-text y pink-text en tu elemento h1.
+-->
+
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  #orange-text {
+    color: orange;
+  }
+  .pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue;
+  }
+</style>
+<h1 style="color: white" id="orange-text" class="pink-text blue-text">Hello World!</h1>

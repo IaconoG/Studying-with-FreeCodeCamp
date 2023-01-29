@@ -1,0 +1,41 @@
+<!-- Usa la propiedad flex-basis para establecer el tamaño inicial de un elemento -->
+
+
+<!-- 
+  La propiedad flex-basis especifica el tamaño inicial del elemento antes de que CSS haga ajustes con flex-shrink o flex-grow.
+    - Las unidades usadas por la propiedad flex-basis son las mismas que otras propiedades de tamaño (px, em, %, etc.).
+    - El valor auto dimensiona los elementos basándose en el contenido.
+
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Establece el tamaño inicial de las cajas usando flex-basis. Agrega la propiedad CSS flex-basis tanto a #box-1 como a #box-2. Da a #box-1 un valor de 10em y a #box-2 un valor de 20em.
+-->
+
+
+<style>
+  #box-container {
+    display: flex;
+    height: 500px;
+  }
+
+  #box-1 {
+    background-color: dodgerblue;
+    height: 200px;
+    flex-basis: 10em;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    height: 200px;
+    flex-basis: 20em;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>

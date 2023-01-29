@@ -1,0 +1,84 @@
+<!-- Añade bordes alrededor de tus elementos -->
+
+
+<!-- 
+  Los bordes CSS tienen propiedades como style (estilo), color y width (ancho).
+
+  Por ejemplo, si quisiéramos crear un borde rojo de 5 píxeles alrededor de un elemento HTML, podríamos usar la siguiente clase:
+
+    <style>
+      .thin-red-border {
+        border-color: red;
+        border-width: 5px;
+        border-style: solid;
+      }
+    </style>
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Crea una clase llamada thick-green-border (borde grueso verde). Esta clase debería añadir un borde verde de 10px, "solid", alrededor de un elemento HTML. Aplica esa clase a tu foto de gato.
+
+  Recuerda que puedes aplicar múltiples clases a un elemento usando su atributo class, separando cada nombre de clase con un espacio. Por ejemplo:
+
+    <img class="class1 class2">  
+-->
+
+
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: red;
+  }
+  h2 {
+    font-family: Lobster, monospace;
+  }
+  p {
+    font-size: 16px;
+    font-family: monospace;
+  }
+  .smaller-image {
+    width: 100px;
+  }
+  .thick-green-border {
+    border-color: green;
+    border-style: solid;
+    border-width: 10px;
+  }
+
+
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+<main>
+  <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img class="smaller-image thick-green-border" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+
+  <div>
+    <p>Things cats love:</p>
+    <ul>
+      <li>cat nip</li>
+      <li>laser pointers</li>
+      <li>lasagna</li>
+    </ul>
+    <p>Top 3 things cats hate:</p>
+    <ol>
+      <li>flea treatment</li>
+      <li>thunder</li>
+      <li>other cats</li>
+    </ol>
+  </div>
+
+  <form action="https://freecatphotoapp.com/submit-cat-photo">
+    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+    <label><input type="checkbox" name="personality" checked> Loving</label>
+    <label><input type="checkbox" name="personality"> Lazy</label>
+    <label><input type="checkbox" name="personality"> Energetic</label><br>
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+</main>

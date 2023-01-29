@@ -1,0 +1,49 @@
+<!-- Limita el tamaño del elemento usando la función minmax -->
+
+
+<!-- 
+  Hay otra función integrada para usar con grid-template-columns y grid-template-rows llamada minmax.
+  Se usa para limitar el tamaño de los elementos cuando el contenedor de la cuadrícula (grid) cambia de tamaño
+
+    - grid-template-columns: 100px minmax(50px, 200px);
+  
+  En el código anterior, grid-template-columns se configuró para crear dos columnas; la primera tiene 100px de ancho y la segunda tiene un ancho mínimo de 50px y máximo de 200px.
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Usando la función minmax, reemplaza 1fr en la función repeat con un tamaño de columna que tenga como mínimo de ancho 90px y máximo de 1fr, y cambia el tamaño del panel de la vista previa para ver el efecto.
+-->
+
+<style>
+  .item1{background:LightSkyBlue;}
+  .item2{background:LightSalmon;}
+  .item3{background:PaleTurquoise;}
+  .item4{background:LightPink;}
+  .item5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    /* Cambia solo el código debajo de esta línea */
+
+    grid-template-columns: repeat(3, minmax(90px, 1fr));
+
+    /* Cambia solo el código encima de esta línea */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+</style>
+
+<div class="container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+</div>

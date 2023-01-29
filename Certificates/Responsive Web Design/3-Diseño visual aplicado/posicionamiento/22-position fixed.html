@@ -1,0 +1,54 @@
+<!-- Bloquea un elemento a la ventana del navegador con el posicionamiento fijo -->
+
+
+<!-- 
+  fixed
+  El siguiente esquema de diseño que ofrece CSS es la posición fixed, que es un tipo de posicionamiento absoluto que bloquea un elemento relativo a la ventana del navegador. 
+
+  Una diferencia clave entre las posiciones fixed y absolute es que un elemento con una posición fija (fixed) no se moverá cuando el usuario se desplace.
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  La barra de navegación en el código está etiquetada con un id de navbar. Cambia su position para fixed, y el desplazamiento 0 píxeles del top y 0 píxeles de la left. Después de agregar el código, desplázate por la ventana de vista previa para ver como la navegación permanece en su luga
+-->
+
+<style>
+  body {
+    min-height: 150vh;
+  }
+  #navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+
+    width: 100%;
+    background-color: #767676;
+  }
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
+</style>
+<body>
+  <header>
+    <h1>Welcome!</h1>
+    <nav id="navbar">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <p>I shift up when the #navbar is fixed to the browser window.</p>
+</body>

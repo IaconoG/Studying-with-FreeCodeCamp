@@ -1,0 +1,60 @@
+<!-- Alinea elementos mediante la propiedad justify-content -->
+
+<!-- https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg -->
+<!-- 
+  Algunas veces los elementos flexibles dentro de un contenedor flexible no llenan todo el espacio del contenedor.
+  Debemos indicarle al CSS cómo alinear y espaciar los elementos flexibles de una determinada manera.
+
+  Para cada uno, la dirección en la que están dispuestos los elementos flexibles se llama el eje principal.            
+    - Para una fila, esta es una línea horizontal que recorta cada elemento. 
+    - Y para una columna, el eje principal es una línea vertical a través de los elementos.
+  
+  justify-content
+    - center: alinea hacia el centro todos los elementos flexibles dentro del contenedor flexible;
+    
+    - flex-start: alinea los elementos con el inicio del contenedor flex.
+      - fila, esto empuja los elementos a la izquierda del contenedor.
+      - columna, esto empuja los elementos a la parte superior del contenedor.
+    
+    - flex-end: alinea los elementos con el final del contenedor flex.
+      - fila, esto empuja los elementos a la derecha del contenedor.
+      - columna, esto empuja los elementos a la parte inferior del contenedor.
+    
+    - space-between: alinea los elementos en el centro del eje principal, con un espacio extra entre los elementos. Los primeros y últimos elementos son empujados hasta el borde del contenedor flexible
+
+    - space-around: el espacio se distribuye alrededor de todos los elementos con la mitad de un espacio en ambos extremos del contenedor flexible.
+
+    - space-evenly: Distribuye el espacio de manera uniforme entre los flex items con un espacio completo en cualquier extremo del flex container.
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Agrega la propiedad CSS justify-content al elemento #box-container y asígnale un valor de center.
+--> 
+
+<style>
+  #box-container {
+    background: gray;
+    display: flex;
+    height: 500px;
+    justify-content: center;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    width: 25%;
+    height: 100%;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 25%;
+    height: 100%;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>

@@ -1,0 +1,87 @@
+<!-- Aprende como funcionan las propiedades de CSS @keyframes y animación -->
+
+
+<!-- 
+  Las propiedades de animación controlan como debe comportarse la animación y la regla @keyframes controla lo que sucede durante esa animación.
+
+  Hay ocho propiedades de animación en total. 
+    - animation-name: none            // especifiar el nombre
+    - animation-duration: 0s          // Xs | Xms
+    - animation-timing-function: ease // ease | ease-in | ease-out | ease-in-out | linear | step-start | step-end
+    - animation-delay: 0s             // Xs, Xms
+    - animation-iteration-count: 1    // infinite, 3, 2.4 
+    - animation-direction: noraml     // normal | reverse | alternate | alternate-reverse 
+    - animation-fill-mode: none       // noen | forwards | backwards | both
+    - animation-play state:           // running, paused, | inherited | initial | unset
+
+  @keyframes es como especificar exactamente lo que sucede dentro de la animación durante la duración.
+    - Esto se hace dando propiedades CSS para "marcos" específicos durante la animación, con porcentajes que van del 0% al 100%.
+
+Aquí hay un ejemplo para ilustrar el uso de @keyframes y las propiedades de animación:
+
+    #anim {
+      animation-name: colorful;
+      animation-duration: 3s;
+    }
+
+    @keyframes colorful {
+      0% {
+        background-color: blue;
+      }
+      100% {
+        background-color: yellow;
+      }
+    }
+
+  Explicacion
+
+    - Para el elemento anim id, el fragmento de codigo anterior establece el animation-name para colorful y establece el animation-duration a 3 segundos. 
+
+    - La regla @keyframes vincula a las propiedades de animación con el nombre colorful
+
+    - Establece el color en azul al principio de la animación (0%) que pasara a amarillo al final de la animación (100%). 
+
+
+  -->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Crea una animación para el elemento con el id rect, estableciendo animation-name en rainbow y animation-duration a 4 segundos. 
+  A continuación, declara una regla @keyframes y estableca el background-color al principio de la animación (0%) en azul, el centro de la animación (50%) en verde y el final de la animación (100%) en amarillo.
+
+
+-->
+
+
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+  }
+
+  #rect {
+    animation-name: rainbow;
+    animation-duration: 4s;
+  }
+  @keyframes rainbow {
+    0% {
+      background-color: blue;
+    }
+    50% {
+      background-color: green;
+    }
+    100% {
+      background-color: yellow;
+    }
+  }
+
+
+
+
+</style>
+<div id="rect"></div>
