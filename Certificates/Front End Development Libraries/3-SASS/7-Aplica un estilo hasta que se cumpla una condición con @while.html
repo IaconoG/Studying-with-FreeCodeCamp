@@ -1,0 +1,17 @@
+<style type='text/scss'>
+  $cont: 1;
+
+  @while $cont < 6{
+    .text-#{$cont} {
+      font-size: 15px * $cont;
+    }
+    $cont: $cont + 1;
+  }
+
+</style>
+
+<p class="text-1">Hello</p>
+<p class="text-2">Hello</p>
+<p class="text-3">Hello</p>
+<p class="text-4">Hello</p>
+<p class="text-5">Hello</p>
