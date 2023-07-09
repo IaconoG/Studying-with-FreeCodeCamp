@@ -1,0 +1,61 @@
+<!-- Ajusta el matiz de un color -->
+
+
+<!-- 
+  Los colores tienen varias características tales como el matiz, la saturación y la ligereza. 
+  CSS3 introdujo la función hsl() como una forma alternativa para elegir un color declarando directamente estas características.
+
+  En hsl(), el tono usa un concepto de círculo cromático en lugar del espectro, donde el ángulo del color en el círculo se da como un valor entre 0 y 360.
+
+    - Saturation es la cantidad de gris en un color, esto se da como un porcentaje con 100% de saturación.
+      - Un color totalmente saturado no tiene gris.
+      - Un color mínimamente saturado es casi completamente gris.
+
+    - Lightness es la cantidad de blanco en un color. Un porcentaje se da desde 0% (negro) hasta 100% (blanco).
+      - Donde 50% es el color normal.
+
+  Ejemplos 
+
+    rojo	    hsl(0, 100 %, 50 %)
+    amarillo	hsl(60, 100 %, 50 %)
+    verde	    hsl(120, 100 %, 50 %)
+    cian	    hsl(180, 100 %, 50 %)
+    azul	    hsl(240, 100 %, 50 %)
+    magenta	  hsl(300, 100 %, 50 %)
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Cambia el background-color de cada elemento div sobre la base de los nombres de las clases (green, cyan o blue) utilizando hsl(). 
+  Los tres deben tener una saturación completa y una iluminación normal.
+-->
+
+<style>
+  body {
+    background-color: #FFFFFF;
+  }
+
+  .green {
+    background-color: hsl(120, 100%, 50%);
+  }
+
+  .cyan {
+    background-color: hsl(180, 100%, 50%);
+  }
+
+  .blue {
+    background-color: 	hsl(240, 100%, 50%);
+  }
+
+  div {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+  }
+</style>
+
+<div class="green"></div>
+<div class="cyan"></div>
+<div class="blue"></div>

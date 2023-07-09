@@ -1,0 +1,37 @@
+<!-- Sobreescribe todos los demás estilos usando !important -->
+
+
+<!-- 
+  En muchas situaciones usarás librerías de CSS. Estas librerías pueden sobreescribir accidentalmente tu propio código CSS. 
+  Entonces, cuando necesites asegurarte de que a un elemento se le aplique un código CSS específico, puedes usar !important.
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Añade la palabra clave !important a la declaración de color de pink-text para asegurarte completamente de que tu elemento h1 será de color rosado.
+
+  Aquí te mostramos un ejemplo de cómo hacerlo:
+
+    color: red !important;
+-->
+
+
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  #orange-text {
+    color: orange;
+  }
+  .pink-text {
+    color: pink !important;
+  }
+  .blue-text {
+    color: blue;
+  }
+</style>
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>

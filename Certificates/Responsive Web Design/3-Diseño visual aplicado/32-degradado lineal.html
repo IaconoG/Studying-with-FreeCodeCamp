@@ -1,0 +1,49 @@
+<!-- Utiliza un degradado lineal CSS para crear un elemento rayado -->
+
+
+<!-- 
+  La función repeating-linear-gradient() es muy similar a linear-gradient() con la principal diferencia de que repite el patrón de degradado especificado.
+
+  repeating-linear-gradient() acepta una variedad de valores
+    - El valor del ángulo es la dirección del gradiente.
+    - Las paradas de color son como valores de ancho que marcan donde tiene lugar una transición, y se dan con un porcentaje o un número de píxeles.
+
+  Ejemplo, el degradado comienza con el color yellow a 0 píxeles que se funde en el segundo color blue a 40 píxeles de distancia desde el principio.
+  Puesto que la siguiente parada de color también es de 40 píxeles, el degradado cambia inmediatamente al tercer color green, el cual se funde en el cuarto valor de color red ya que está a 80 píxeles del principio del degradado.
+
+    background: repeating-linear-gradient(
+      90deg,
+      yellow 0px,
+      blue 40px,
+      green 40px,
+      red 80px
+    );
+
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Haz rayas cambiando el repeating-linear-gradient() para usar un ángulo gradiente de 45deg, luego ajusta las dos primeras paradas de color en yellow, y finalmente las dos segundas paradas de color en black
+-->
+
+<style>
+
+  div{
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin:  50 auto;
+    background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
+  }
+
+</style>
+
+<div></div>

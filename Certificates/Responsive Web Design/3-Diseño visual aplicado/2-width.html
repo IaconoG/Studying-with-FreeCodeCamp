@@ -1,0 +1,53 @@
+<!-- Ajusta el ancho de un elemento utilizando la propiedad width -->
+
+
+<!-- 
+  Puedes especificar el ancho de un elemento con la propiedad width en CSS. 
+  Los valores se pueden dar en unidades de longitud relativa (como em, unidades de longitud absoluta (como px, o como un porcentaje de su elemento padre contenedor. El siguiente ejemplo cambia el ancho de una imagen a 220px:
+
+    img {
+      width: 220px;
+    }
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Añade la propiedad width a toda la tarjeta y establécelo en un valor absoluto de 245px. Utiliza la clase fullCard para seleccionar el elemento.
+-->
+
+<style>
+  h4 {
+    text-align: center;
+  }
+  p {
+    text-align: justify;
+  }
+  .links {
+    margin-right: 20px;
+    text-align: left;
+  }
+  .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  .cardContent {
+    padding: 10px;
+  }
+</style>
+<div class="fullCard">
+  <div class="cardContent">
+    <div class="cardText">
+      <h4>Google</h4>
+      <p>Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University.</p>
+    </div>
+    <div class="cardLinks">
+      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a>
+      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+    </div>
+  </div>
+</div>

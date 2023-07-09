@@ -1,0 +1,57 @@
+<!--Ajusta el padding (relleno) de un elemento -->
+
+
+<!-- 
+  Hay tres propiedades importantes que controlan el espacio que rodea cada elemento HTML: 
+    - padding (relleno)
+    - border (borde)
+    - margin (margen)
+
+  El padding o relleno de un elemento controla la cantidad de espacio entre su contenido y su border.
+  
+  Cuando aumentas el padding de la caja azul, esto aumenta la distancia (padding) entre el texto y el borde que lo rodea.
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!-- 
+  Cambia el padding de la caja azul para que coincida con el de la caja roja.
+-->
+
+<style>
+  .injected-text {
+    margin-bottom: -25px;
+    text-align: center;
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+  .yellow-box {
+    background-color: yellow;
+    padding: 10px;
+  }
+
+  .red-box {
+    background-color: crimson;
+    color: #fff;
+    padding: 20px;
+  }
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+  }
+</style>
+<h5 class="injected-text">margin</h5>
+
+<div class="box yellow-box">
+  <h5 class="box red-box">padding</h5>
+  <h5 class="box blue-box">padding</h5>
+</div>

@@ -1,0 +1,58 @@
+<!-- Usa animación CSS para cambiar el estado del desplazamiento de un botón -->
+
+
+<!-- 
+  Puedes usar CSS @keyframes para cambiar el color de un botón en su estado de desplazamiento
+  Ejemplo
+
+    <style>
+    img {
+      width: 30px;
+    }
+    img:hover {
+      animation-name: width;
+      animation-duration: 500ms;
+    }
+
+    @keyframes width {
+      100% {
+        width: 40px;
+      }
+    }
+  </style>
+
+  <img src="https://cdn.freecodecamp.org/curriculum/applied-visual-design/google-logo.png" alt="Google's Logo" />
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Ten en cuenta que ms significa milisegundos, donde 1000ms es igual a 1s.
+
+  Utiliza CSS @keyframes para cambiar el background-color del elemento button para que se convierta en #4791d0 cuando un usuario pase sobre él. La regla @keyframes solo debe tener una entrada para 100%.
+-->
+
+
+<style>
+  button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+
+  button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+  }
+
+  @keyframes background-color {
+    100% {
+      background-color: #4791d0;
+    }
+  }
+
+</style>
+
+<button>Register</button>

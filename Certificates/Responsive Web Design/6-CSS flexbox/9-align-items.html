@@ -1,0 +1,63 @@
+<!-- Alinea elementos mediante la propiedad align-items -->
+
+
+<!-- 
+  La propiedad align-items es similar a justify-content. 
+  ecuerda que la propiedad justify-content alineó los elementos flexibles a lo largo del eje principal. 
+
+    - Los contenedores flexibles también tienen un eje transversal que es el opuesto al eje principal. 
+      - Para las filas, el eje transversal es vertical y para las columnas, el eje transversal es horizontal.
+
+  align-items
+  CSS ofrece la propiedad align-items para alinear elementos flexibles a lo largo del eje transversal.
+
+    - flex-start: alinea los elementos con el inicio del contenedor flexible.
+      - filas, esto alinea los elementos a la parte superior del contenedor. 
+      - columnas, esto alinea los elementos a la parte izquierda del contenedor.
+    
+    - flex-end: alinea los elementos con el final del contenedor flexible.
+      - filas, esto alinea los elementos a la parte inferior del contenedor. 
+      - columnas, esto alinea los elementos a la parte derecha del contenedor.
+
+    - center: alinea los elementos hacia el centro.
+      - filas, esto alinea los elementos verticalmente
+      - olumnas, esto las alinea horizontalmente.
+
+    - stretch: estira los elementos para llenar el contenedor flexible.
+
+    - baseline: alinea los elementos con sus líneas base.
+      - Una línea base es un concepto de texto, piensa en ella como la línea en la que se sitúan las letras.
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Un ejemplo ayuda a mostrar esta propiedad en acción. Agrega la propiedad CSS align-items al elemento #box-container y asígnale un valor de center.
+-->
+
+
+<style>
+  #box-container {
+    background: gray;
+    display: flex;
+    height: 500px;
+    align-items: center;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    width: 200px;
+    font-size: 24px;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 200px;
+    font-size: 18px;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"><p>Hello</p></div>
+  <div id="box-2"><p>Goodbye</p></div>
+</div>

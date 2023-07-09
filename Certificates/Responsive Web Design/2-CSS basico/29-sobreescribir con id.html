@@ -1,0 +1,34 @@
+<!-- Sobreescribe declaraciones de clase dando estilo a atributos ID -->
+
+
+<!-- 
+  Los navegadores leen CSS desde arriba hacia abajo siguiendo el orden de las declaraciones.
+  Si llega a ocasionarse un conflicto, el navegador utilizará la última declaración CSS
+
+  Nota: No importa si declaras este CSS arriba o debajo de la clase pink-text, ya que el atributo id siempre tendrá precedencia.
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Sobrescribamos tus clases pink-text y blue-text, y haz que el h1 sea naranja al darle al elemento h1 un id y luego estilizando ese id.
+-->
+
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue;
+  }
+  #orange-text {
+    color: orange;
+  }
+</style>
+<h1 id="orange-text" class="pink-text blue-text" >Hello World!</h1>

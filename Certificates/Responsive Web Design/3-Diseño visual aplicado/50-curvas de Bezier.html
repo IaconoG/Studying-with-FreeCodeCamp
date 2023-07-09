@@ -1,0 +1,67 @@
+<!-- Descubre como funcionan las curvas de Bezier -->
+
+
+<!-- 
+  En las animaciones CSS, las curvas Bezier se utilizan con la función cubic-bezier. La forma de la curva representa cómo se desarrolla la animación.
+
+  La curva vive en un sistema de coordenadas de 1 a 1.
+    - El eje X de este sistema de coordenadas es la duración de la animación (piénsa en una escala de tiempo)
+    - El eje Y es el cambio en la animación.
+  
+  La función cubic-bezier consta de cuatro puntos principales que se encuentran en esta cuadrícula de 1 por 1: p0, p1, p2 y p3.
+    - p0 y p3 están configurados para ti: son los puntos inicial y final que siempre se encuentran respectivamente en el origen (0, 0) y (1, 1).
+    - establece los valores x e y para los otros dos puntos, y donde los coloca en la cuadrícula determina la forma de la curva para la animación que debe seguir.
+  
+  Esto se hace en CSS declarando los valores x e y de los puntos "anchor" p1 y p2 de la siguiente forma:(x1, y1, x2, y2).
+
+  animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+-->
+
+
+<!-- Ejercicio -->
+ 
+<!--
+  Para el elemento con el id de ball1, cambia el valor de la propiedad animation-timing-function de linear a su valor de función cubic-bezier equivalente.
+   Utiliza los valores de puntos dados en el ejemplo anterior.
+-->
+
+
+<style>
+
+  .balls{
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #ball1 {
+    left: 27%;
+    animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  }
+  #ball2 {
+    left: 56%;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes bounce {
+    0% {
+      top: 0px;
+    }
+    100% {
+      top: 249px;
+    }
+  }
+
+</style>
+
+<div class="balls" id="ball1"></div>
+<div class="balls" id="ball2"></div>
