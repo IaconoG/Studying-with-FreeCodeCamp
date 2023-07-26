@@ -10,7 +10,7 @@ En este repositorio ire subiendo todo lo trabajado con freeCodeCamp.
 
 - [x] [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/GianIacono/javascript-algorithms-and-data-structures)
 - [x] [Responsive Web Design](https://www.freecodecamp.org/certification/GianIacono/responsive-web-design)
-- [ ] Front End Development Libraries
+- [x] Front End Development Libraries
 - [ ] Back End Development and APIs
 
 
