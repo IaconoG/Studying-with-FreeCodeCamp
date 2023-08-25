@@ -16,11 +16,12 @@ En este repositorio ire subiendo todo lo trabajado con freeCodeCamp.
 
 ## Projectos echos en los certificados
 ### Responsive Web Design
-  - [Encuesta](https://github.com/IaconoG/1.Tribute-Page)
-  - [Pagina de homenaje](https://github.com/IaconoG/2.Survey-Form)
-  - [Página de documentación técnica](https://github.com/IaconoG/3.Product-Landing-Page)
-  - [Landing page de un producto](https://github.com/IaconoG/4.Technical-Documentatio-Page)
-  - [Portafolio Personal](https://github.com/IaconoG/5.Personal-Portfolio-Webpage)
+
+  - [Encuesta](https://iaconog.github.io/1.Tribute-Page/)
+  - [Pagina de homenaje](https://iaconog.github.io/2.Survey-Form/)
+  - [Página de documentación técnica](https://iaconog.github.io/3.Product-Landing-Page/)
+  - [Landing page de un producto](https://iaconog.github.io/4.Technical-Documentatio-Page/)
+  - [Portafolio Personal](https://iaconog.github.io/5.Personal-Portfolio-Webpage/)
 
 ### JavaScript Algorithms and Data Structures
   - Comprobador de palíndromos
