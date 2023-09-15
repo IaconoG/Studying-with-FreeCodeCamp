@@ -3,8 +3,6 @@
 ## Sobre este repositorio 
 
 En este repositorio ire subiendo todo lo trabajado con freeCodeCamp.
-  - Proyectos y ejercicios de los certificados.
-  - Practicas a través del canal de youtube.
 
 ## Certificados a realizar
 
@@ -12,6 +10,7 @@ En este repositorio ire subiendo todo lo trabajado con freeCodeCamp.
 - [x] [Responsive Web Design](https://www.freecodecamp.org/certification/GianIacono/responsive-web-design)
 - [x] [Front End Development Libraries](https://www.freecodecamp.org/certification/GianIacono/front-end-development-libraries)
 - [ ] Back End Development and APIs
+- [ ] Foundational C# with Microsoft
 
 
 ## Projectos echos en los certificados
