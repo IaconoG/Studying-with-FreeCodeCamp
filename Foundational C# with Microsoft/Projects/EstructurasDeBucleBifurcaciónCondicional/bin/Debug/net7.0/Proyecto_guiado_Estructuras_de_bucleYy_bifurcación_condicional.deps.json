@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Proyecto_guiado_Estructuras_de_bucleYy_bifurcación_condicional/1.0.0": {
+        "runtime": {
+          "Proyecto_guiado_Estructuras_de_bucleYy_bifurcación_condicional.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Proyecto_guiado_Estructuras_de_bucleYy_bifurcación_condicional/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
